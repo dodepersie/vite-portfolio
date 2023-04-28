@@ -5,14 +5,14 @@ const TechStack = () => {
     return (
         <section id="tech-stack">
             <div className="container-fluid" data-theme="cyberpunk">
-                <div className="hero min-h-screen bg-base-700">
+                <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col-reverse lg:flex-row">
-                        <div className="text-base tracking-tight">
+                        <div className="text-base">
                             <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">
                                 $tech_stack
                             </h1>
 
-                            <p className="mb-5 font-semibold text-lg" data-aos="fade-up">
+                            <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
                                 I've done some projects by myself & I'm a Front-End addict and currently learning about Back-End (‾◡◝)
                             </p>    
 
@@ -32,8 +32,6 @@ const TechStack = () => {
                             </div>
 
                         </div>  
-                        
-                        <div className="divider divider-horizontal"></div> 
 
                         <div className="hidden lg:block" data-aos="fade-left">
                             <div className="mockup-code shadow-2xl rounded-xl">
