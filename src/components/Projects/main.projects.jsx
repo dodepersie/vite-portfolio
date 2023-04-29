@@ -1,7 +1,8 @@
 import { projects } from '../../constants/main.constants'
 
 const Projects = () => {
-  return (
+
+    return (
     <section id="projects">
         <div className="container-fluid" data-theme="light">
             <div className="hero min-h-screen bg-base-200">

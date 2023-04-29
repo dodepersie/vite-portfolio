@@ -4,6 +4,7 @@ import { faList } from "@fortawesome/free-solid-svg-icons"
 const menuLink = [
     {'link': '#projects', 'name': 'Projects'},
     {'link': '#tech-stack', 'name': 'Tech Stack'},
+    {'link': '#contact', name: 'Contact'}
 ];
 
 export const Navbar = () => {
