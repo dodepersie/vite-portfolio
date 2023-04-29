@@ -1,5 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter'
-import profilePic from './../../assets/2.jpg'
+import profilePic from './../../assets/1.jpg'
 
 const Home = () => {
   return (
@@ -44,7 +44,7 @@ const Home = () => {
                             Here I come again! My name is I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
                         </p>
 
-                        <a href="#projects" className="btn btn-block bg-gradient-to-r from-cyan-500 to-blue-500 lg:w-28">See more</a>        
+                        <a href="#projects" className="btn btn-outline btn-info btn-block rounded-none lg:w-28">See more</a>        
                     </div>     
 
                     <div className="divider divider-horizontal"></div> 

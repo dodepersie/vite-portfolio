@@ -1849,6 +1849,11 @@
   dependencies:
     "@remix-run/router" "1.5.0"
 
+"react-scroll-to-top@^3.0.0":
+  "integrity" "sha512-I/k45Ujai097du59tHBbzGxN7Lyc6K8Uc3IChq6HMXaBfB8N/rrfm055T5Yv0DWfVpf6pOFaBmhD3LOfH5unGw=="
+  "resolved" "https://registry.npmjs.org/react-scroll-to-top/-/react-scroll-to-top-3.0.0.tgz"
+  "version" "3.0.0"
+
 "react-simple-typewriter@^5.0.1":
   "integrity" "sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row=="
   "resolved" "https://registry.npmjs.org/react-simple-typewriter/-/react-simple-typewriter-5.0.1.tgz"

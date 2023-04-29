@@ -30,7 +30,6 @@ const TechStack = () => {
                                     </div>
                                 ))}
                             </div>
-
                         </div>  
 
                         <div className="hidden lg:block" data-aos="fade-left">

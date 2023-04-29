@@ -1,30 +1,30 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import { Navbar } from './components/Layouts/navbar.layouts'
-import Home from "./components/Home/main.home"
-import TechStack from "./components/TechStack/main.techstack"
-import Projects from './components/Projects/main.projects'
-import { Footer } from './components/Layouts/footer.layouts'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Main } from './components/main.main';
+import { NotFound } from './components/Home/notfound.home';
+import ScrollToTop from "react-scroll-to-top"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
   AOS.init({
-    once: "false",
     easing: "ease-in-out-back",
     duration: "1000",
   });
 
   return (
-    <>
-    <div className="select-none">
-      <Navbar />
-      <Home />
-      <Projects />
-      <TechStack />
-      <Footer />
-    </div>
-    </>
+    <Router>
+      <div className="select-none">
+      <ScrollToTop data-aos="zoom-in" smooth component={<FontAwesomeIcon icon={faChevronUp} style={{ fontSize: "1rem" }} />} />
+        <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

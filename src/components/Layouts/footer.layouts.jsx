@@ -1,5 +1,5 @@
 import { AiFillGithub, AiFillInstagram, AiFillFacebook, AiOutlineWhatsApp } from 'react-icons/ai'
-const currentYear = new Date().getFullYear();
+import p2 from './../../assets/2.jpg'
 
 export const Footer = () => {
     return (
@@ -12,9 +12,15 @@ export const Footer = () => {
                     <a href="https://wa.me/+6287862191120?text=Hi,%20i%20want%20to%20use%20your%20service%20to%20develop%20our%20site" className="transition duration-300 ease-in-out transform hover:scale-125"><AiOutlineWhatsApp size="2rem" /></a>
                 </div>
 
-                <div>
-                    <p>By Mahadi Saputra x Vite + React x Tailwind @ {currentYear}</p>
-                </div>
+                <div className="flex justify-items-start lg:items-center">
+                    <div className="avatar inline-block mr-1">
+                        <div className="w-8 rounded-full ring ring-blue-500 ring-offset-base-100 ring-offset-2 cursor-pointer">
+                            <img src={p2} alt="Mahadi Saputra's Avatar" />
+                        </div>
+                    </div>
+            
+                    <p className="text-sm">By Mahadi Saputra @ Vercel x React &lt;3</p>
+                </div>            
             </footer>
         </>
     )

@@ -22,7 +22,7 @@ export const Navbar = () => {
                         </ul>
                     </div>
 
-                    <a className="btn btn-ghost normal-case text-xl">Mahadi Saputra <sup>3</sup></a>
+                    <a href="/" className="btn btn-ghost normal-case text-xl">Mahadi Saputra <sup>3</sup></a>
                 </div>
 
                 {/* Menu for LG Screen Size */}
