@@ -44,13 +44,13 @@ const Home = () => {
                             Here I come again! My name is I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
                         </p>
 
-                        <a href="#projects" className="btn btn-outline btn-info btn-block rounded-none lg:w-28">See more</a>        
+                        <a href="#projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-white btn-block border-0 lg:w-28">See more</a>        
                     </div>     
 
                     <div className="divider divider-horizontal"></div> 
 
                     <div className="hidden lg:block" data-aos="fade-left">
-                        <img src={profilePic} className="transition duration-300 ease-in-out transform hover:scale-110 rounded-lg min-w-full shadow-2xl shadow-blue-500/50" />
+                        <img src={profilePic} className="transition duration-300 ease-in-out transform hover:scale-110 rounded-lg min-w-full shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />
                     </div>   
 
                 </div>

@@ -13,7 +13,7 @@ const TechStack = () => {
                             </h1>
 
                             <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
-                                I've done some projects by myself & I'm a Front-End addict and currently learning about Back-End (‾◡◝)
+                                Here you can see what I&apos;ve learning. I am learning day by day φ(゜▽゜*)♪
                             </p>    
 
                             <div className="flex flex-col lg:flex-row justify-between items-center gap-5">

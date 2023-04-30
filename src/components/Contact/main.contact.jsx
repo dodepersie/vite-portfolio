@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMessage } from "@fortawesome/free-solid-svg-icons";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
 const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
@@ -49,22 +51,47 @@ export const Contact = () => {
     return (
         <section id="contact">
             <div className="container-fluid mx-auto" data-theme="fantasy">
-                <div className="hero min-h-screen bg-base-200">
-                    <div className="text-center flex-col lg:flex-row w-full max-w-2xl p-3">
+                <div className="hero min-h-screen bg-base-200 dark:bg-slate-800">
+                    <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
                         <div data-aos="fade-right">
-                            <h1 className="mb-5 text-5xl font-bold">
-                                Contact me
-                            </h1>
+                            <div className="text-center dark:text-white">
+                                <h1 className="mb-5 text-4xl font-bold">
+                                    <FontAwesomeIcon icon={faMessage} className="mr-4" />
+                                    Contact me
+                                </h1>
 
-                            <p className="text-lg mb-5 leading-loose">
-                                Don't be shy!
-                            </p>
+                                <p className="text-lg mb-5 leading-loose">
+                                    Don&apos;t be shy, friends! (o゜▽゜)o☆
+                                </p>
+                            </div>
 
-                            <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-3 gap-4">
-                                <input type="text" name="user_name" placeholder="Name" className="input" required />
-                                <input type="email" name="user_email" placeholder="Email" className="input" required />
-                                <textarea className="textarea w-full row-span-5 resize-none" name="message" placeholder="Message" required></textarea>
-                                <button className="btn btn-outline btn-primary w-full min-w-lg" type="submit">Send</button>
+                            <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-1 ">
+                                <div className="form-control w-full">
+                                    <label className="label">
+                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Name</span>
+                                    </label>
+                                    <input type="text" name="user_name" className="input border-0 focus:input-secondary w-full" required />
+                                </div>
+
+                                <div className="form-control w-full">
+                                    <label className="label">
+                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Email</span>
+                                    </label>
+                                    <input type="email" name="user_email" className="input border-0 focus:input-secondary w-full invalid:text-pink-700 mt-2 peer" required />
+                                    <label className="label invisible peer-invalid:visible">
+                                        <span className="label-text-alt text-pink-700 dark:text-pink-500 font-bold">Please enter a valid email address!</span>
+                                    </label>
+                                </div>
+
+                                <div className="form-control w-full">
+                                    <label className="label">
+                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Message</span>
+                                    </label>
+                                    <textarea className="textarea border-0 focus:textarea-secondary resize-none" name="message" placeholder="Message" required></textarea>
+                                </div>
+
+                                <button className="btn btn-outline btn-primary dark:text-white w-full mt-4" type="submit">Send</button>
+
                             </form>
 
                             {showAlert && <AlertMessage message={alertMessage} />}

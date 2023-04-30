@@ -5,3 +5,7 @@
 html {
     scroll-behavior: smooth;
 }
+
+textarea {
+    height: 150px;
+}

@@ -1,20 +1,28 @@
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { projects } from '../../constants/main.constants'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Projects = () => {
 
     return (
     <section id="projects">
         <div className="container-fluid" data-theme="light">
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 dark:bg-slate-800">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-base tracking-tight my-20 lg:my-auto">
-                        <h1 className="mb-5 text-3xl font-bold font-sans" data-aos="fade-up">
-                            Projects
-                        </h1>
+                    <div className="text-base tracking-tight my-20 lg:my-auto dark:text-white">
+
+                        <div className="flex items-center text-3xl" data-aos="fade-up">
+                            <FontAwesomeIcon icon={faTerminal} className="inline-block mr-2.5 mt-1 text-2xl dark:text-white" />
+                            <h2 className="text-gray-700 font-bold my-2 dark:text-white">Projects</h2>
+                        </div>
+
+                        <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
+                            I&apos;ve done some projects by myself & I'm a Front-End addict and currently learning about Back-End (≧∇≦)ﾉ
+                        </p>  
 
                         <div className="grid grid-rows-1 lg:grid-rows-1 grid-flex-cols lg:grid-cols-3 gap-5">
                             {projects.map(( { title, description, image, tags, visit }, index) => (
-                                <div data-aos="fade-up" className="card w-68 lg:w-96 bg-base-100 shadow-xl image-full" key={index}>
+                                <div data-aos="fade-up" className="card w-68 lg:w-96 shadow-xl image-full" key={index}>
                                     <figure>
                                         <img src={image} alt={title} />
                                     </figure>
@@ -30,12 +38,11 @@ const Projects = () => {
 
                                         <div className="card-actions justify-end">
                                         {tags.map(( tag, i ) => (
-                                            <div className="badge badge-info badge-lg text-base-100 p-3" key={i}>
+                                            <div className="badge badge-info badge-lg text-base-100 p-3 dark:badge-primary" key={i}>
                                                 {tag}
                                             </div>
                                         ))}
                                         </div>
-
                                     </div>
                                 </div> 
                             ))}
