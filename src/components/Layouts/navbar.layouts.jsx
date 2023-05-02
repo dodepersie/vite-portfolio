@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faList } from "@fortawesome/free-solid-svg-icons"
-import { useDarkMode } from "../Utilities/usedark.utilities";
+import { faNavicon } from "@fortawesome/free-solid-svg-icons"
+import { useDarkMode } from "../Utilities/usedark.utilities"
+import { useState } from "react"
 
 const menuLink = [
     {'link': '#projects', 'name': 'Projects'},
@@ -11,15 +12,24 @@ const menuLink = [
 export const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
 
+    const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const handleCollapsible = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
     return (
         <div data-theme="cmyk">
             <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-10 shadow-lg dark:bg-slate-600 dark:text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <FontAwesomeIcon icon={faList} />
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden" onClick={handleCollapsible}>
+                            <FontAwesomeIcon icon={faNavicon} />
                         </label>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 dark:bg-slate-700">
+                        <ul
+                            className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 dark:bg-slate-700 ${
+                                isCollapsed ? "hidden" : ""} font-semibold`}
+                            >
                         {menuLink.map(( item, index ) => (
                             <li key={index}><a href={item.link}>{item.name}</a></li>
                         ))}

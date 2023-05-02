@@ -78,9 +78,6 @@ export const Contact = () => {
                                         <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Email</span>
                                     </label>
                                     <input type="email" name="user_email" className="input border-0 focus:input-secondary w-full invalid:text-pink-700 mt-2 peer" required />
-                                    <label className="label invisible peer-invalid:visible">
-                                        <span className="label-text-alt text-pink-700 dark:text-pink-500 font-bold">Please enter a valid email address!</span>
-                                    </label>
                                 </div>
 
                                 <div className="form-control w-full">
