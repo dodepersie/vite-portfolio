@@ -21,7 +21,7 @@ const Projects = () => {
                         </p>  
 
                         <div className="grid grid-rows-1 lg:grid-rows-1 grid-flex-cols lg:grid-cols-3 gap-5">
-                            {projects.map(( { title, description, image, tags, visit }, index) => (
+                                {projects.sort((a, b) => a.title.localeCompare(b.title)).map(( { title, description, image, tags, visit }, index) => (
                                 <div data-aos="fade-up" className="card w-68 lg:w-96 shadow-xl image-full" key={index}>
                                     <figure>
                                         <img src={image} alt={title} />
