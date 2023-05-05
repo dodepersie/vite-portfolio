@@ -7,6 +7,7 @@ const menuLink = [
     {'link': '#projects', 'name': 'Projects'},
     {'link': '#tech-stack', 'name': 'Tech Stack'},
     {'link': '#contact', name: 'Contact'},
+    {'link': 'https://blog.mahadisaputra.my.id', name: 'Blog'},
 ];
 
 export const Navbar = () => {
