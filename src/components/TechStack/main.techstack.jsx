@@ -5,7 +5,7 @@ const TechStack = () => {
     return (
         <section id="tech-stack">
             <div className="container-fluid" data-theme="cyberpunk">
-                <div className="hero min-h-screen bg-base-200">
+                <div className="hero min-h-screen bg-base-200 p-auto md:p-4">
                     <div className="hero-content flex-col-reverse lg:flex-row">
                         <div className="text-base">
                             <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">

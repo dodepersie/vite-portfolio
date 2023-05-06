@@ -15,7 +15,6 @@ export const NotFound = () => {
 
                         <a href="/" className="btn btn-primary btn-block rounded-none lg:w-28">Go to home</a>        
                     </div>     
-
                 </div>
             </div>
         </div>

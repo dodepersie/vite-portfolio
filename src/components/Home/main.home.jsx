@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section id="header">
         <div className="container-fluid mx-auto" data-theme="synthwave">
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 p-auto md:p-4">
                 <div className="hero-content flex-col lg:flex-row">
                     <div data-aos="fade-right">
                         <h1 className="mb-5 text-5xl font-bold">
@@ -17,6 +17,7 @@ const Home = () => {
                                 'こんにちは', 
                                 '你好', 
                                 'Bonjour', 
+                                'Hallo',
                                 '¡Hola', 
                                 'Привет', 
                                 'Zdravo', 
