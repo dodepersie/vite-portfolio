@@ -20,7 +20,7 @@ function App() {
       <div className="select-none">
       <ScrollToTop data-aos="zoom-in" smooth component={<FontAwesomeIcon icon={faChevronUp} style={{ fontSize: "1rem", color: '#000000' }} />} />
         <Routes>
-            <Route path="/" element={<Main />} />
+            <Route exact path="/" element={<Main />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
