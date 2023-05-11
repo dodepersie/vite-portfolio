@@ -7,7 +7,7 @@ const Projects = () => {
     return (
     <section id="projects">
         <div className="container-fluid" data-theme="light">
-            <div className="hero min-h-screen bg-base-200 dark:bg-slate-800">
+            <div className="hero min-h-screen bg-base-200 dark:bg-slate-900">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-base tracking-tight my-20 lg:my-auto dark:text-white">
 

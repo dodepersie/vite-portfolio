@@ -21,12 +21,13 @@ export const Navbar = () => {
 
     return (
         <div data-theme="cmyk">
-            <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-10 shadow-lg dark:bg-slate-600 dark:text-white">
+            <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-10 shadow-lg dark:bg-slate-900 dark:text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden" onClick={handleCollapsible}>
                             <FontAwesomeIcon icon={faNavicon} />
                         </label>
+
                         <ul
                             className={`menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 dark:bg-slate-700 ${
                                 isCollapsed ? "hidden" : ""} font-semibold`}
@@ -37,9 +38,9 @@ export const Navbar = () => {
                         </ul>
                     </div>
 
-                    <a href="/" className="btn btn-ghost normal-case text-xl dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-white">Mahadi Saputra <sup>3</sup></a>
+                    <a href="/" className="btn btn-ghost normal-case text-xl dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-white">Mahadi Saputra</a>
                     
-                    <div className="mt-1">
+                    <div className="mt-2 mx-2">
                         <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
                     </div>
                 </div>

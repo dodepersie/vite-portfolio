@@ -8,9 +8,9 @@ import p5 from './../assets/projects/5.png' // Laravel BLog
 import p6 from './../assets/projects/6.png' // v3 Portfolio
 
 export const techStack = [
-    {'logo': faHashtag, 'name': 'frame_work', dec: 'Bootstrap, Laravel, mySQL, Next JS, React, Tailwind'},
+    {'logo': faHashtag, 'name': 'frame_work', dec: 'Bootstrap, Laravel, Next JS, React, Tailwind (daisyUI, Flowbite, nextUI)'},
     {'logo': faUsers, 'name': 'team_work', dec: 'Can collaborate with friends and also using GitHub'},
-    {'logo': faCode, 'name': 'web_dev', dec: 'CSS, HTML, PHP, Web Deployment & WordPress'},
+    {'logo': faCode, 'name': 'web_dev', dec: 'Cloudflare, cPanel, mySQL, Netlify, Vercel'},
 ];
 
 export const projects = [

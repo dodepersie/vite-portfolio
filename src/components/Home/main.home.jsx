@@ -1,11 +1,12 @@
 import { Typewriter } from 'react-simple-typewriter'
 import profilePic from './../../assets/1.jpg'
+import heroBg from './../../assets/heroBg.jpg'
 
 const Home = () => {
   return (
     <section id="header">
         <div className="container-fluid mx-auto" data-theme="synthwave">
-            <div className="hero min-h-screen bg-base-200 p-auto md:p-4">
+        <div className="hero min-h-screen p-auto md:p-4" style={{ backgroundImage: `url("${heroBg}")`, filter: 'grayscale(50%) contrast(150%)' }}>
                 <div className="hero-content flex-col lg:flex-row">
                     <div data-aos="fade-right">
                         <h1 className="mb-5 text-5xl font-bold">
@@ -42,13 +43,11 @@ const Home = () => {
                         </h1>
 
                         <p className="text-lg mb-5 leading-loose">
-                            Here I come again! My name is I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
+                            I am I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
                         </p>
 
                         <a href="#projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-white btn-block border-0 lg:w-28">See more</a>        
                     </div>     
-
-                    <div className="divider divider-horizontal"></div> 
 
                     <div className="hidden lg:block" data-aos="fade-left">
                         <img src={profilePic} className="transition duration-300 ease-in-out transform hover:scale-110 rounded-lg min-w-full shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />

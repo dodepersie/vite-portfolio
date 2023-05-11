@@ -6,7 +6,7 @@ const TechStack = () => {
         <section id="tech-stack">
             <div className="container-fluid" data-theme="cyberpunk">
                 <div className="hero min-h-screen bg-base-200 p-auto md:p-4">
-                    <div className="hero-content flex-col-reverse lg:flex-row">
+                    <div className="hero-content flex-row gap-x-20">
                         <div className="text-base">
                             <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">
                                 $tech_stack
@@ -15,8 +15,8 @@ const TechStack = () => {
                             <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
                                 Here you can see what I&apos;ve learning. I am learning day by day φ(゜▽゜*)♪
                             </p>    
-
-                            <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
+                            
+                            <div className="flex flex-col justify-start items-start">
                                 {techStack.map(( item, index ) => (
                                     <div data-aos="fade-up" className="py-4" key={index}>
                                         <div className="flex items-center">
@@ -29,14 +29,14 @@ const TechStack = () => {
                                         </p>
                                     </div>
                                 ))}
-                            </div>
-                        </div>  
-
+                            </div>  
+                        </div> 
                         <div className="hidden lg:block" data-aos="fade-left">
                             <div className="mockup-code shadow-2xl rounded-xl">
-                                <pre data-prefix="$" className='text-white'><code>yarn create vite myPortfolio</code></pre> 
-                                <pre data-prefix="$" className='text-white'><code>yarn</code></pre> 
-                                <pre data-prefix="$" className='text-white'><code>yarn dev</code></pre>
+                                <pre data-prefix="$" className='text-white'><code>npm create vite@latest myPortfolio</code></pre> 
+                                <pre data-prefix=">" className="text-warning"><code>Creating...</code></pre> 
+                                <pre data-prefix="$" className='text-white'><code>cd myPortfolio</code></pre> 
+                                <pre data-prefix="$" className='text-white'><code>npm run dev</code></pre>
                             </div>
                         </div>   
                     </div>

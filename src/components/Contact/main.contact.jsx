@@ -51,7 +51,7 @@ export const Contact = () => {
     return (
         <section id="contact">
             <div className="container-fluid mx-auto" data-theme="fantasy">
-                <div className="hero min-h-screen bg-base-200 dark:bg-slate-800">
+                <div className="hero min-h-screen bg-base-200 dark:bg-slate-900">
                     <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
                         <div data-aos="fade-right">
                             <div className="text-center dark:text-white">
