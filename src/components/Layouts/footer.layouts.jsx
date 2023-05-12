@@ -4,7 +4,7 @@ import p2 from './../../assets/2.jpg'
 export const Footer = () => {
     return (
         <>
-            <footer className="footer footer-center p-10 bg-base-100 dark:bg-slate-900 text-base-content rounded">
+            <footer className="footer footer-center p-10 bg-base-100 dark:bg-slate-900 text-base-content dark:text-gray-50 rounded">
                 <div className="grid grid-flow-col gap-4">
                     <a href="https://www.facebook.com/DodePersie" target="_blank" rel="noreferrer" className="transition duration-300 ease-in-out transform hover:scale-125"><AiFillFacebook size="2rem" /></a>
                     <a href="https://github.com/DodePersie" target="_blank" rel="noreferrer" className="transition duration-300 ease-in-out transform hover:scale-125"><AiFillGithub size="2rem" /></a>

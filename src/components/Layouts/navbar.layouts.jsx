@@ -14,20 +14,20 @@ const menuLink = [
 export const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
     const [isCollapsed, setIsCollapsed] = useState(true);
-    const [scrolled, setScrolled] = useState(false);
+    // const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        setScrolled(scrollPosition > 0);
-    };
+    // useEffect(() => {
+    // const handleScroll = () => {
+    //     const scrollPosition = window.scrollY;
+    //     setScrolled(scrollPosition > 0);
+    // };
 
-    window.addEventListener('scroll', handleScroll);
+    // window.addEventListener('scroll', handleScroll);
 
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-    }, []);
+    // return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    // };
+    // }, []);
 
     const handleCollapsible = () => {
     setIsCollapsed(!isCollapsed);
@@ -35,10 +35,8 @@ export const Navbar = () => {
 
     return (
         <nav
-            className={`navbar fixed top-0 left-0 right-0 z-10 shadow-lg text-gray-50 ${
-                scrolled ? 'scrolled' : ''
-              }`}
-            data-theme="cmyk"
+            className={`navbar fixed top-0 left-0 right-0 z-10 shadow-sm bg-blue-500 dark:bg-slate-900 text-gray-50 font-sans`}
+            data-theme="wireframe"
             id="navbar"
             >
             <div className="navbar-start">
@@ -60,7 +58,7 @@ export const Navbar = () => {
                 <a href="/" className="inline-flex btn btn-ghost normal-case text-xl dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-gray-50">Mahadi Saputra</a>
                 
                 <div className="mt-2 mx-2">
-                    <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
+                    <input type="checkbox" className="toggle border-none" checked={isDarkMode} onChange={toggleDarkMode} />
                 </div>
             </div>
 
