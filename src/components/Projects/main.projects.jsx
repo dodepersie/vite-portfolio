@@ -2,25 +2,25 @@ import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { projects } from '../../constants/main.constants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Projects = () => {
+export const Projects = () => {
 
     return (
     <section id="projects">
         <div className="container-fluid" data-theme="light">
-            <div className="hero min-h-screen bg-base-200 dark:bg-slate-900">
+            <div className="hero min-h-screen bg-white dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-base tracking-tight my-20 lg:my-auto dark:text-white">
+                    <div className="text-base tracking-tight my-20 lg:my-auto">
 
-                        <div className="flex items-center text-3xl" data-aos="fade-up">
-                            <FontAwesomeIcon icon={faTerminal} className="inline-block mr-2.5 mt-1 text-2xl dark:text-white" />
-                            <h2 className="text-gray-700 font-bold my-2 dark:text-white">Projects</h2>
+                        <div className="flex items-center text-3xl pb-4" data-aos="fade-up">
+                            <FontAwesomeIcon icon={faTerminal} className="inline-block mr-2.5 mt-1 text-2xl" />
+                            <h2 className="font-bold my-2">Recent Projects</h2>
                         </div>
 
                         <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
                             I&apos;ve done some projects by myself & I'm a Front-End addict and currently learning about Back-End (≧∇≦)ﾉ
                         </p>  
 
-                        <div className="grid grid-rows-1 lg:grid-rows-1 grid-flex-cols lg:grid-cols-3 gap-5">
+                        <div className="grid grid-rows-1 lg:grid-rows-1 grid-flex-cols lg:grid-cols-3 gap-5 md:gap-10 py-3">
                                 {projects.sort((a, b) => a.title.localeCompare(b.title)).map(( { title, description, image, tags, visit }, index) => (
                                 <div data-aos="fade-up" className="card w-68 lg:w-96 shadow-xl image-full" key={index}>
                                     <figure>
@@ -34,7 +34,7 @@ const Projects = () => {
                                             </div>
                                             
                                         </h2>
-                                        <p className="text-white">{description}</p>
+                                        <p className="text-gray-50">{description}</p>
 
                                         <div className="card-actions justify-end">
                                         {tags.map(( tag, i ) => (
@@ -54,5 +54,3 @@ const Projects = () => {
     </section>
   )
 }
-
-export default Projects;

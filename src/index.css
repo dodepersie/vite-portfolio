@@ -9,3 +9,12 @@ html {
 textarea {
     height: 150px;
 }
+
+/* Menjadikan navbar transparan */
+#navbar {
+    background-color: transparent; /* Ubah nilai transparansi di sini, misalnya 0.5 */
+}
+
+#navbar.scrolled {
+    background-color: #222;
+}

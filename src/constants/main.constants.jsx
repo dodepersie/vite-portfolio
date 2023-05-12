@@ -13,6 +13,17 @@ export const techStack = [
     {'logo': faCode, 'name': 'web_dev', dec: 'Cloudflare, cPanel, mySQL, Netlify, Vercel'},
 ];
 
+export const skills = [
+  { title: "CSS", percentage: 80 },
+  { title: "Github", percentage: 85 },
+  { title: "HTML", percentage: 85 },
+  { title: "Laravel", percentage: 80 },
+  { title: "PHP", percentage: 80 },
+  { title: "React", percentage: 80 },
+  { title: "Tailwind", percentage: 85 },
+  { title: "Web", percentage: 80 },
+];
+
 export const projects = [
     {
       id: 1,

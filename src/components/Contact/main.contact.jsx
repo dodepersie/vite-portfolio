@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
+import { faContactCard } from "@fortawesome/free-solid-svg-icons";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
 const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
@@ -51,12 +51,12 @@ export const Contact = () => {
     return (
         <section id="contact">
             <div className="container-fluid mx-auto" data-theme="fantasy">
-                <div className="hero min-h-screen bg-base-200 dark:bg-slate-900">
+                <div className="hero min-h-screen bg-base-200 dark:bg-slate-600 p-auto md:p-4">
                     <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
                         <div data-aos="fade-right">
-                            <div className="text-center dark:text-white">
+                            <div className="text-center dark:text-gray-50">
                                 <h1 className="mb-5 text-4xl font-bold">
-                                    <FontAwesomeIcon icon={faMessage} className="mr-4" />
+                                    <FontAwesomeIcon icon={faContactCard} className="mr-4" />
                                     Contact me
                                 </h1>
 
