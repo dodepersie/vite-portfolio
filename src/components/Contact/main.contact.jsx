@@ -51,7 +51,7 @@ export const Contact = () => {
     return (
         <section id="contact">
             <div className="container-fluid mx-auto" data-theme="fantasy">
-                <div className="hero min-h-screen bg-base-200 dark:bg-slate-600 p-auto md:p-4">
+                <div className="hero min-h-screen bg-base-200 dark:bg-slate-800 p-auto md:p-4">
                     <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
                         <div data-aos="fade-right">
                             <div className="text-center dark:text-gray-50">
@@ -67,27 +67,18 @@ export const Contact = () => {
 
                             <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-1 ">
                                 <div className="form-control w-full">
-                                    <label className="label">
-                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Name</span>
-                                    </label>
-                                    <input type="text" name="user_name" className="input border-0 focus:input-secondary w-full" required />
+                                    <input type="text" name="user_name" className="input border-0 focus:input-secondary w-full" placeholder="Your name.." required />
                                 </div>
 
                                 <div className="form-control w-full">
-                                    <label className="label">
-                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Email</span>
-                                    </label>
-                                    <input type="email" name="user_email" className="input border-0 focus:input-secondary w-full invalid:text-pink-700 mt-2 peer" required />
+                                    <input type="email" name="user_email" className="input border-0 focus:input-secondary w-full mt-2"  placeholder="Your email.." required />
                                 </div>
 
                                 <div className="form-control w-full">
-                                    <label className="label">
-                                        <span className="label-text after:content-['*'] after:text-pink-700 after:ml-0.5 dark:text-white">Message</span>
-                                    </label>
-                                    <textarea className="textarea border-0 focus:textarea-secondary resize-none" name="message" placeholder="Message" required></textarea>
+                                    <textarea className="textarea border-0 focus:textarea-secondary resize-none mt-2" name="message" placeholder="Your message.." required></textarea>
                                 </div>
 
-                                <button className="btn btn-outline btn-primary dark:text-white w-full mt-4" type="submit">Send</button>
+                                <button className="btn border-none mt-4 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50" type="submit">Send</button>
 
                             </form>
 

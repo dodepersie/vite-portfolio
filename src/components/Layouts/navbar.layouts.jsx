@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 
 const menuLink = [
     {'link': '#projects', 'name': 'Projects'},
-    {'link': '#experience', 'name': 'Experience & Skills'},
+    {'link': '#experience', 'name': 'Experience'},
     {'link': '#tech-stack', 'name': 'Tech Stack'},
     {'link': '#contact', name: 'Contact'},
     {'link': 'https://blog.mahadisaputra.my.id', name: 'Blog'},
@@ -14,34 +14,42 @@ const menuLink = [
 export const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
     const [isCollapsed, setIsCollapsed] = useState(true);
-    // const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    // useEffect(() => {
-    // const handleScroll = () => {
-    //     const scrollPosition = window.scrollY;
-    //     setScrolled(scrollPosition > 0);
-    // };
+    useEffect(() => {
+        const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        setScrolled(scrollPosition > 0);
+        };
 
-    // window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-    // return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    // };
-    // }, []);
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const handleCollapsible = () => {
-    setIsCollapsed(!isCollapsed);
+        setIsCollapsed(!isCollapsed);
     };
+
+    const navbarBackground = isDarkMode
+    ? scrolled
+      ? 'bg-slate-800 text-gray-50 transition-colors duration-300'
+      : 'bg-transparent text-gray-50 transition-colors duration-300'
+    : scrolled
+    ? 'bg-blue-800 text-gray-50 transition-colors duration-300'
+    : 'bg-transparent text-gray-50 transition-colors duration-300';  
 
     return (
         <nav
-            className={`navbar fixed top-0 left-0 right-0 z-10 shadow-sm bg-blue-500 dark:bg-slate-900 text-gray-50 font-sans`}
-            data-theme="wireframe"
+            className={`navbar fixed top-0 left-0 right-0 z-10 shadow-lg ${navbarBackground}`}
+            data-theme="cmyk"
             id="navbar"
             >
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className={`btn btn-ghost lg:hidden text-gray-50`} onClick={handleCollapsible}>
+                    <label tabIndex={0} className={`btn btn-ghost lg:hidden hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 text-gray-50`} onClick={handleCollapsible}>
                         <FontAwesomeIcon icon={faNavicon} />
                     </label>
 
@@ -50,12 +58,12 @@ export const Navbar = () => {
                             isCollapsed ? "hidden" : ""} font-semibold bg-gray-50 text-black dark:bg-slate-700 dark:text-gray-50`}
                         >
                     {menuLink.map(( item, index ) => (
-                        <li key={index}><a href={item.link}>{item.name}</a></li>
+                        <li key={index} className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-lg"><a href={item.link}>{item.name}</a></li>
                     ))}
                     </ul>
                 </div>
 
-                <a href="/" className="inline-flex btn btn-ghost normal-case text-xl dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-gray-50">Mahadi Saputra</a>
+                <a href="/" className="inline-flex btn btn-ghost normal-case text-xl hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700dark:text-gray-50">Mahadi Saputra</a>
                 
                 <div className="mt-2 mx-2">
                     <input type="checkbox" className="toggle border-none" checked={isDarkMode} onChange={toggleDarkMode} />
@@ -66,7 +74,7 @@ export const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {menuLink.map(( item, index ) => (
-                        <li key={index}><a href={item.link} className="font-semibold dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-gray-50">{item.name}</a></li>
+                        <li key={index}><a href={item.link} className="font-semibold hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 text-gray-50">{item.name}</a></li>
                     ))}
                 </ul>
             </div>

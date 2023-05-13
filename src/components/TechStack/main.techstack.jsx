@@ -33,7 +33,7 @@ export const TechStack = () => {
                             </div>  
                         </div> 
                         <div className="hidden lg:block" data-aos="fade-left">
-                            <div className="mockup-code bg-gray-100 dark:bg-slate-700 shadow-2xl rounded-xl">
+                            <div className="mockup-code bg-gray-100 dark:bg-slate-700 shadow-2xl dark:shadow-slate-700/50 rounded-xl">
                                 <pre data-prefix="$" className='text-black dark:text-gray-50'><code>npm create vite@latest myPortfolio</code></pre> 
                                 <pre data-prefix=">" className="text-yellow-600 dark:text-warning"><code>Creating...</code></pre> 
                                 <pre data-prefix="$" className='text-black dark:text-gray-50'><code>cd myPortfolio</code></pre> 
