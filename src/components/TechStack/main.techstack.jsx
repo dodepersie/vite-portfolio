@@ -7,7 +7,7 @@ export const TechStack = () => {
         <section id="tech-stack">
             <div className="container-fluid font-mono">
                 <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50">
-                    <div className="hero-content flex-row gap-x-20">
+                    <div className="hero-content flex-row gap-20">
                         <div className="text-base">
                             <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">
                                 <FontAwesomeIcon icon={faDollarSign} /> tech_stack
@@ -25,7 +25,7 @@ export const TechStack = () => {
                                             <h2 className="font-bold text-xl my-2">{item.name}</h2>
                                         </div>
                                 
-                                        <p className="my-1">
+                                        <p className="my-1 leading-loose">
                                             {item.dec}
                                         </p>
                                     </div>

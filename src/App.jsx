@@ -12,7 +12,7 @@ function App() {
 
   AOS.init({
     easing: "ease-in-out-back",
-    duration: "1000",
+    duration: "1500",
   });
 
   return (

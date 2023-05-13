@@ -46,15 +46,17 @@ export const Home = () => {
                         </h1>
 
                         <p className="text-lg mb-5 leading-loose">
-                            I am I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
+                            I&apos;m I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
                         </p>
 
                         <a href="#projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</a>        
                     </div>     
 
                     <div className="hidden lg:block indicator" data-aos="fade-left">
-                        <label htmlFor="aboutModal" className="indicator-item badge border-none bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 px-4 py-5 cursor-pointer">More...</label>
-                        <img src={profilePic} className="rounded-lg min-w-full shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />
+                        <div className="transition-all hover:scale-105">
+                            <label htmlFor="aboutModal" className="indicator-item badge border-none bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 px-4 py-5 cursor-pointer">More...</label>
+                            <img src={profilePic} className="rounded-lg min-w-full shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />
+                        </div>
                     </div> 
                 </div>
 

@@ -34,10 +34,10 @@ export const Navbar = () => {
 
     const navbarBackground = isDarkMode
     ? scrolled
-      ? 'bg-slate-800 text-gray-50 transition-colors duration-300'
+      ? 'bg-slate-800 text-gray-50 shadow-lg transition-colors duration-300'
       : 'bg-transparent text-gray-50 transition-colors duration-300'
     : scrolled
-    ? 'bg-gray-50 text-blacktransition-colors duration-300'
+    ? 'bg-gray-50 text-black shadow-lg transition-colors duration-300'
     : 'bg-transparent text-gray-50 transition-colors duration-300';  
 
     const navbarItems = isDarkMode 
@@ -62,9 +62,9 @@ export const Navbar = () => {
                             isCollapsed ? "hidden" : ""} font-semibold bg-gray-50 text-black dark:bg-slate-700 dark:text-gray-50`}
                         >
                     {menuLink.map(( item, index ) => (
-                        <li key={index} className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-lg"><a href={item.link}>{item.name}</a></li>
+                        <li key={index} className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-xl"><a href={item.link}>{item.name}</a></li>
                     ))}
-                    <li className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-lg"><a href="https://blog.mahadisaputra.my.id" target="_blank" rel="noreferrer">Blog</a></li>
+                    <li className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-xl"><a href="https://blog.mahadisaputra.my.id" target="_blank" rel="noreferrer">Blog</a></li>
                     </ul>
                 </div>
 
@@ -79,9 +79,9 @@ export const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {menuLink.map(( item, index ) => (
-                        <li key={index}><a href={item.link} className={`font-semibold hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 hover:text-gray-50 ${navbarItems}`}>{item.name}</a></li>
+                        <li key={index}><a href={item.link} className={`font-semibold hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 hover:text-gray-50 me-2 ${navbarItems}`}>{item.name}</a></li>
                     ))}
-                    <a href="http://blog.mahadisaputra.my.id/" target="_blank" rel="noreferrer" className="btn capitalize bg-blue-500 dark:bg-slate-500 border-0">Blog</a>
+                    <a href="http://blog.mahadisaputra.my.id/" target="_blank" rel="noreferrer" className="btn capitalize bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0">Blog</a>
                 </ul>
             </div>
         </nav>
