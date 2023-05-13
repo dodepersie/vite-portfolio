@@ -8,7 +8,6 @@ const menuLink = [
     {'link': '#experience', 'name': 'Experience'},
     {'link': '#tech-stack', 'name': 'Tech Stack'},
     {'link': '#contact', name: 'Contact'},
-    {'link': 'https://blog.mahadisaputra.my.id', name: 'Blog'},
 ];
 
 export const Navbar = () => {
@@ -38,18 +37,23 @@ export const Navbar = () => {
       ? 'bg-slate-800 text-gray-50 transition-colors duration-300'
       : 'bg-transparent text-gray-50 transition-colors duration-300'
     : scrolled
-    ? 'bg-blue-800 text-gray-50 transition-colors duration-300'
+    ? 'bg-gray-50 text-blacktransition-colors duration-300'
     : 'bg-transparent text-gray-50 transition-colors duration-300';  
+
+    const navbarItems = isDarkMode 
+    ? scrolled 
+        ? 'text-gray-50' 
+        : 'text-gray-50'
+    : '';
 
     return (
         <nav
-            className={`navbar fixed top-0 left-0 right-0 z-10 shadow-lg ${navbarBackground}`}
-            data-theme="cmyk"
+            className={`navbar fixed top-0 left-0 right-0 z-10 ${navbarBackground}`}
             id="navbar"
             >
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className={`btn btn-ghost lg:hidden hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 text-gray-50`} onClick={handleCollapsible}>
+                    <label tabIndex={0} className={`btn btn-ghost lg:hidden hover:bg-blue-500 hover:text-gray-50 active:text-gray-50 focus:text-gray-50 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700`} onClick={handleCollapsible}>
                         <FontAwesomeIcon icon={faNavicon} />
                     </label>
 
@@ -60,13 +64,14 @@ export const Navbar = () => {
                     {menuLink.map(( item, index ) => (
                         <li key={index} className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-lg"><a href={item.link}>{item.name}</a></li>
                     ))}
+                    <li className="dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 rounded-lg"><a href="https://blog.mahadisaputra.my.id" target="_blank" rel="noreferrer">Blog</a></li>
                     </ul>
                 </div>
 
-                <a href="/" className="inline-flex btn btn-ghost normal-case text-xl hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700dark:text-gray-50">Mahadi Saputra</a>
+                <a href="/" className="inline-flex btn btn-ghost normal-case text-xl hover:bg-blue-500 hover:text-gray-50 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 dark:text-gray-50">Mahadi Saputra</a>
                 
-                <div className="mt-2 mx-2">
-                    <input type="checkbox" className="toggle border-none" checked={isDarkMode} onChange={toggleDarkMode} />
+                <div className="mt-2 mx-4">
+                    <input type="checkbox" className="toggle" checked={isDarkMode} onChange={toggleDarkMode} />
                 </div>
             </div>
 
@@ -74,8 +79,9 @@ export const Navbar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {menuLink.map(( item, index ) => (
-                        <li key={index}><a href={item.link} className="font-semibold hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 text-gray-50">{item.name}</a></li>
+                        <li key={index}><a href={item.link} className={`font-semibold hover:bg-blue-500 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 hover:text-gray-50 ${navbarItems}`}>{item.name}</a></li>
                     ))}
+                    <a href="http://blog.mahadisaputra.my.id/" target="_blank" rel="noreferrer" className="btn capitalize bg-blue-500 dark:bg-slate-500 border-0">Blog</a>
                 </ul>
             </div>
         </nav>

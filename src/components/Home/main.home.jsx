@@ -7,7 +7,7 @@ import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 export const Home = () => {
   return (
     <section id="hero">
-        <div className="container-fluid mx-auto" data-theme="synthwave">
+        <div className="container-fluid mx-auto text-gray-50">
             <div className="hero p-auto">
                 <div className="hero min-h-screen" style={{ backgroundImage: `url("${heroBg}")`, filter: 'grayscale(50%) contrast(150%)' }}></div>
                 <div className="hero-content flex-col lg:flex-row p-auto md:p-14 lg:p-auto">

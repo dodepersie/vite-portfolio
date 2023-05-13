@@ -17,8 +17,8 @@ function App() {
 
   return (
     <Router>
-      <div className="select-none">
-      <ScrollToTop data-aos="zoom-in" smooth component={<FontAwesomeIcon icon={faChevronUp} style={{ fontSize: "1rem", color: '#000000' }} />} />
+      <div className="select-none" data-theme="light">
+      <ScrollToTop smooth className={`transition-opacity duration-500`} component={<FontAwesomeIcon icon={faChevronUp} />} />
         <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="*" element={<NotFound />} />

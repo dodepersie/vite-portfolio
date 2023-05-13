@@ -5,8 +5,8 @@ import { techStack } from '../../constants/main.constants';
 export const TechStack = () => {
     return (
         <section id="tech-stack">
-            <div className="container-fluid" data-theme="cyberpunk">
-                <div className="hero min-h-screen bg-white dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4">
+            <div className="container-fluid font-mono">
+                <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50">
                     <div className="hero-content flex-row gap-x-20">
                         <div className="text-base">
                             <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">
