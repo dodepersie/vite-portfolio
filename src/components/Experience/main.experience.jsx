@@ -8,7 +8,7 @@ export const Experience = () => {
             <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4">
                 <div className="hero-content flex-row">
                     <div className="text-base">
-                        <h1 className="pt-5 pb-5 text-3xl font-bold" data-aos="fade-up">
+                        <h1 className="pt-5 pb-5 text-3xl font-semibold" data-aos="fade-up">
                             <FontAwesomeIcon icon={faCheck} /> Experience
                         </h1>
                         

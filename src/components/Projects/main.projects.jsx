@@ -12,10 +12,10 @@ export const Projects = () => {
                     <div data-aos="fade-up">
                         <div className="flex items-center text-3xl pb-4">
                             <FontAwesomeIcon icon={faTerminal} className="inline-block mr-2.5 mt-1 text-2xl" />
-                            <h2 className="font-bold my-2">Recent Projects</h2>
+                            <h2 className="font-semibold my-2">Recent Projects</h2>
                         </div>
                         
-                        <p className="mb-5 font-semibold text-md lg:text-lg leading-loose">
+                        <p className="mb-5 font-normal text-md lg:text-lg leading-loose">
                             I&apos;ve done some projects by myself & I&apos;m a Front-End addict and currently learning about Back-End (≧∇≦)ﾉ
                         </p>  
                     </div>

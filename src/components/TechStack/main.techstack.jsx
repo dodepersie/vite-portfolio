@@ -9,11 +9,11 @@ export const TechStack = () => {
                 <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50">
                     <div className="hero-content flex-row gap-20">
                         <div className="text-base">
-                            <h1 className="mb-5 text-3xl font-bold" data-aos="fade-up">
+                            <h1 className="mb-5 text-3xl font-semibold" data-aos="fade-up">
                                 <FontAwesomeIcon icon={faDollarSign} /> tech_stack
                             </h1>
 
-                            <p className="mb-5 font-semibold text-md lg:text-lg leading-loose" data-aos="fade-up">
+                            <p className="mb-5 font-normal text-md lg:text-lg leading-loose" data-aos="fade-up">
                                 Here you can see what I&apos;ve learning. I am learning day by day φ(゜▽゜*)♪
                             </p>    
                             
@@ -22,7 +22,7 @@ export const TechStack = () => {
                                     <div data-aos="fade-up" className="py-4" key={index}>
                                         <div className="flex items-center">
                                             <FontAwesomeIcon icon={item.logo} className="inline-block mr-2 -my-1" />
-                                            <h2 className="font-bold text-xl my-2">{item.name}</h2>
+                                            <h2 className="font-semibold text-xl my-2">{item.name}</h2>
                                         </div>
                                 
                                         <p className="my-1 leading-loose">

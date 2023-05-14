@@ -60,7 +60,7 @@ export const Contact = () => {
                     <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
                         <div data-aos="fade-right">
                             <div className="text-center dark:text-gray-50">
-                                <h1 className="mb-5 text-4xl font-bold">
+                                <h1 className="mb-5 text-4xl font-semibold">
                                     <FontAwesomeIcon icon={faContactCard} /> Contact me
                                 </h1>
 

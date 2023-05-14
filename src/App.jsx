@@ -17,7 +17,7 @@ function App() {
 
   return (
     <Router>
-      <div className="select-none" data-theme="light">
+      <div className="select-none font-sans" data-theme="light">
       <ScrollToTop smooth className={`transition-opacity duration-500`} component={<FontAwesomeIcon icon={faChevronUp} />} />
         <Routes>
             <Route exact path="/" element={<Main />} />
