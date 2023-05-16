@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faContactCard } from "@fortawesome/free-solid-svg-icons";
+import { ContactAnimate } from './../../assets/lottie/contactAnimation/contactAnimation'
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
 const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
@@ -57,36 +58,38 @@ export const Contact = () => {
         <section id="contact">
             <div className="container-fluid mx-auto">
                 <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800">
-                    <div className="text-left flex-col lg:flex-row w-full max-w-2xl p-3">
-                        <div data-aos="fade-right">
-                            <div className="text-center dark:text-gray-50">
-                                <h1 className="mb-5 text-4xl font-semibold">
-                                    <FontAwesomeIcon icon={faContactCard} /> Contact me
-                                </h1>
+                    <div className="hero-content flex-row w-full gap-14 text-black dark:text-gray-50">
+                        <div className="hidden md:block w-2/5" data-aos="zoom-in">
+                            <ContactAnimate />
+                        </div>
 
-                                <p className="text-lg mb-5 leading-loose">
-                                    Don&apos;t be shy, friends! (o゜▽゜)o☆
-                                </p>
+                        <div className="text-base text-center md:text-left w-full" data-aos="fade-right">
+                            <h1 className="mb-5 text-4xl font-semibold">
+                                <FontAwesomeIcon icon={faContactCard} /> Contact me
+                            </h1>
+
+                            <p className="text-lg mb-5 leading-loose">
+                                Don&apos;t be shy, friends! (o゜▽゜)o☆
+                            </p>
+
+                        <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-1 ">
+                            <div className="form-control w-full">
+                                <input type="text" name="user_name" className="input border caret-pink-500 bg-gray-100" placeholder="Your name.." required />
                             </div>
 
-                            <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-1 ">
-                                <div className="form-control w-full">
-                                    <input type="text" name="user_name" className="input border caret-pink-500 bg-gray-100" placeholder="Your name.." required />
-                                </div>
+                            <div className="form-control w-full">
+                                <input type="email" name="user_email" className="input border caret-pink-500 bg-gray-100 mt-5" placeholder="Your email.." required />
+                            </div>
 
-                                <div className="form-control w-full">
-                                    <input type="email" name="user_email" className="input border caret-pink-500 bg-gray-100 mt-5" placeholder="Your email.." required />
-                                </div>
+                            <div className="form-control w-full">
+                                <textarea className="textarea caret-pink-500 bg-gray-100 resize-none mt-5" name="message" placeholder="Your message.." required></textarea>
+                            </div>
 
-                                <div className="form-control w-full">
-                                    <textarea className="textarea caret-pink-500 bg-gray-100 resize-none mt-5" name="message" placeholder="Your message.." required></textarea>
-                                </div>
+                            <button className="btn border-none mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50" type="submit">Send</button>
 
-                                <button className="btn border-none mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50" type="submit">Send</button>
+                        </form>
 
-                            </form>
-
-                            {showAlert && <AlertMessage message={alertMessage} isSuccess={isSuccess} />}
+                        {showAlert && <AlertMessage message={alertMessage} isSuccess={isSuccess} />}
                         </div>
                     </div>
                 </div>

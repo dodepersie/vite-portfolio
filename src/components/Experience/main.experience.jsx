@@ -1,12 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck } from "@fortawesome/free-solid-svg-icons"
+import { ExperienceAnimate } from './../../assets/lottie/experienceAnimation/experienceAnimation'
 
 export const Experience = () => {
   return (
     <section id="experience">
         <div className="container-fluid">
             <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4">
-                <div className="hero-content flex-row">
+                <div className="hero-content flex-col-reverse md:flex-row gap-14">
+                    <div className="w-5/6" data-aos="zoom-in">
+                        <ExperienceAnimate />
+                    </div>
+
                     <div className="text-base">
                         <h1 className="pt-5 pb-5 text-3xl font-semibold" data-aos="fade-up">
                             <FontAwesomeIcon icon={faCheck} /> Experience
