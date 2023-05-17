@@ -4,15 +4,14 @@ import p2 from './../../assets/2.jpg'
 export const Footer = () => {
     return (
         <>
-        <section className="relative pt-10">
+        <div className="wave__wrapper">
             <div className="wave wave1"></div>
             <div className="wave wave2"></div>
             <div className="wave wave3"></div>
             <div className="wave wave4"></div>
-        </section>
+        </div>
 
         <footer className="footer footer-center p-5 text-gray-50">
-
                 <div className="grid grid-flow-col gap-4">
                     <a href="https://www.facebook.com/DodePersie" target="_blank" rel="noreferrer" className="transition duration-300 ease-in-out transform hover:scale-125"><AiFillFacebook size="2rem" /></a>
                     <a href="https://github.com/DodePersie" target="_blank" rel="noreferrer" className="transition duration-300 ease-in-out transform hover:scale-125"><AiFillGithub size="2rem" /></a>

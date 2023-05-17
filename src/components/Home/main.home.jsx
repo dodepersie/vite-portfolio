@@ -1,5 +1,4 @@
 import { Typewriter } from 'react-simple-typewriter'
-import profilePic from './../../assets/1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-scroll"
@@ -7,70 +6,36 @@ import { Link } from "react-scroll"
 export const Home = () => {
   return (
     <section id="hero">
-        <div className="container-fluid mx-auto text-gray-50">
-            <div className="hero h-screen p-auto pt-20 bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
-                <div className="hero-content flex-col md:flex-col lg:flex-row p-auto md:p-14 lg:p-auto md:gap-10">
-                    <div className="w-auto xl:w-4/5"data-aos="fade-right">
-                        <h1 className="mb-5 text-5xl font-bold">
-                            <Typewriter
-                            words={
-                                ['Hai', 
-                                'Hello', 
-                                '안녕', 
-                                'こんにちは', 
-                                '你好', 
-                                'Bonjour', 
-                                'Hallo',
-                                '¡Hola', 
-                                'Привет', 
-                                'Zdravo', 
-                                'Kumusta', 
-                                'नमस्ते', 
-                                'Szia', 
-                                'Ciao', 
-                                'ជំរាបសួរ', 
-                                'ສະບາຍດີ', 
-                                'ဟယ်လို', 
-                                'สวัสดี', 
-                                'Chào', 
-                                'سلام']
-                                }
-                                loop={999}
-                                cursor
-                                cursorStyle='!'
-                                typeSpeed={100}
-                                deleteSpeed={100}
-                                delaySpeed={1000}
-                            />
-                        </h1>
+        <div className="container-fluid text-gray-50">
+            <div className="flex justify-between items-center min-h-screen bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
+                <div className="flex justify-between items-end w-full flex-col lg:flex-row-reverse">
+                    <div className="hidden lg:inline-block coverBg w-3/5 min-h-screen" data-aos="fade-down"></div>
 
-                        <p className="text-lg mb-5 leading-loose">
-                            I&apos;m I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
-                        </p>
-
-                        <Link to="projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</Link>        
-                    </div>   
+                    <div className="w-full px-4 xl:py-16" data-aos="fade-right">
+                        <div className="flex flex-col gap-5 xl:w-full">
+                            <h1 className="text-3xl xl:text-5xl font-bold h-12 leading-snug">
+                                I&apos;m Mahadi Saputra
+                            </h1>
                     
-                    <div></div>
+                            <h3 className="text-2xl xl:text-3xl font-normal">
+                                <span>A </span>
+                                <span className="text-blue-500 dark:text-slate-500 font-semibold">
+                                    <Typewriter
+                                        words={['Student', 'Learner', 'Dreamer', 'Code Enthusiast', 'Web Developer']}
+                                        loop={999}
+                                        typeSpeed={100}
+                                        deleteSpeed={100}
+                                        delaySpeed={1000}
+                                    />
+                                </span>
+                            </h3>
 
-                    <div className="hidden md:block indicator" data-aos="zoom-in">
-                        <div className="transition-all hover:scale-105">
-                            <label htmlFor="aboutModal" className="indicator-item badge border-none bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 px-4 py-5 cursor-pointer">More...</label>
-                            <img src={profilePic} className="rounded-lg w-96 shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />
-                        </div>
-                    </div> 
-                </div>
+                            <p className="text-lg leading-loose">
+                                &quot;Unleash your potential, ignite your passion, and embark on a transformative journey of self-discovery and success!&quot;
+                            </p>
 
-                <input type="checkbox" id="aboutModal" className="modal-toggle" />
-                <div className="modal">
-                    <div className="modal-box bg-blue-800 dark:bg-slate-900 text-gray-50">
-                        <h3 className="font-bold text-lg pb-5">More about me</h3>
-                        <p className="leading-loose">
-                        My name is <strong>I Dewa Gede Mahadi Saputra</strong> and people usually called me <strong>Dode Mahadi</strong> or <strong>Mahadi Saputra</strong>. I am from <strong>Tabanan, Bali, Indonesia</strong>. I can work together in a team and complete assignments on time. I have a very big passion in Web Developing ...(*￣０￣)ノ
-                        </p>
-                        <div className="modal-action">
-                            <label htmlFor="aboutModal" className="btn border-0 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50">Close</label>
-                        </div>
+                            <Link to="projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</Link>  
+                        </div>                          
                     </div>
                 </div>
             </div>

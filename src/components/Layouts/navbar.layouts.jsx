@@ -18,14 +18,14 @@ export const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        setScrolled(scrollPosition > 0);
+            const scrollPosition = window.scrollY;
+            setScrolled(scrollPosition > 80);
         };
 
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-        window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -34,24 +34,15 @@ export const Navbar = () => {
     };
 
     const navbarBackground = isDarkMode
-    ? scrolled
-      ? 'bg-slate-900 shadow-lg transition-colors duration-300'
-      : 'bg-transparent transition-colors duration-300'
-    : scrolled
-    ? 'bg-white shadow-lg transition-colors duration-300'
-    : 'bg-transparent transition-colors duration-300';  
+    ? (scrolled ? 'bg-slate-900 transition-colors duration-500' : 'transition-colors duration-500')
+    : (scrolled ? 'bg-white transition-colors duration-500' : 'transition-colors duration-500');
 
-    const navbarItems = isDarkMode 
-    ? scrolled 
-        ? 'text-gray-50' 
-        : 'text-gray-50'
-    : '';
+    const navbarItems = isDarkMode ? (scrolled ? 'text-gray-50' : 'text-gray-50') : '';
 
     return (
         <nav
             className={`navbar fixed top-0 left-0 right-0 z-10 ${navbarBackground}`}
-            id="navbar"
-            >
+        >
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className={`btn btn-ghost xl:hidden dark:text-gray-50 hover:bg-blue-500 hover:text-gray-50 active:text-gray-50 focus:text-gray-50 focus:bg-blue-600 active:bg-blue-700 dark:hover:bg-slate-500 dark:focus:bg-slate-600 dark:active:bg-slate-700 mx-1.5`} onClick={handleCollapsible}>
@@ -71,7 +62,7 @@ export const Navbar = () => {
                                 duration={100} 
                                 offset={0}
                                 href={item.link}
-                                activeClass="bg-slate-100 dark:bg-slate-500 text-black font-semibold" 
+                                activeClass="active dark:bg-slate-500 text-black font-semibold" 
                                 className="hover:bg-slate-100 focus:bg-slate-200 dark:hover:bg-slate-500 dark:focus:bg-slate-600 text-black dark:text-gray-50 hover:rounded-lg my-1"
                             >
                                 {item.name}
@@ -92,7 +83,7 @@ export const Navbar = () => {
             </div>
 
             {/* Menu for LG Screen Size */}
-            <div className="navbar-end hidden xl:flex">
+            <div className="navbar-center hidden xl:flex">
                 <ul className="menu menu-horizontal px-1">
                     {menuLink.map(( item, index ) => (
                         <li key={index}>
@@ -102,16 +93,22 @@ export const Navbar = () => {
                                 smooth={true}
                                 duration={100} 
                                 offset={0}
-                                activeClass="bg-blue-500 dark:bg-slate-500 text-gray-50 font-semibold" 
+                                activeClass="active dark:bg-slate-500 text-gray-50 font-semibold" 
                                 className={`font-normal hover:bg-blue-500 focus:bg-blue-600 dark:hover:bg-slate-500 dark:focus:bg-slate-600 hover:text-gray-50 focus:text-gray-50 me-2 ${navbarItems}`}
                             >
                                 {item.name}
                             </Link>
                         </li>
                     ))}
+                    
+                </ul>
+            </div>
+
+            <div className="navbar-end hidden xl:flex">
+                <ul className="menu menu-horizontal px-1">
                     <li>
                         <a href="http://blog.mahadisaputra.my.id/" target="_blank" rel="noreferrer" className="btn capitalize bg-blue-500 font-medium hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0">Blog</a>
-                    </li>
+                    </li>      
                 </ul>
             </div>
         </nav>
