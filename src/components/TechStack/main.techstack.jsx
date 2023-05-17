@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { techStack } from '../../constants/main.constants';
-import { Robot } from '../../assets/lottie/robotAnimation/robotAnimation';
+import { TechStackAnimated } from '../../assets/lottie/techStackAnimation/techStackAnimation';
 
 export const TechStack = () => {
     return (
@@ -9,7 +9,7 @@ export const TechStack = () => {
             <div className="container-fluid font-mono">
                 <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50">
                     <div className="hero-content flex-row gap-14 w-full">
-                        <div className="text-base w-full md:w-3/5">
+                        <div className="text-base w-full md:w-3/5 p-auto md:p-4 lg:p-auto">
                             <h1 className="mb-5 text-3xl font-semibold" data-aos="fade-up">
                                 <FontAwesomeIcon icon={faDollarSign} /> tech_stack
                             </h1>
@@ -33,8 +33,8 @@ export const TechStack = () => {
                                 ))}
                             </div>  
                         </div> 
-                        <div className="hidden md:block md:w-1/2" data-aos="zoom-in">
-                            <Robot />
+                        <div className="hidden md:block md:w-2/5" data-aos="zoom-in">
+                            <TechStackAnimated />
                         </div>   
                     </div>
                 </div>

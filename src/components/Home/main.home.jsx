@@ -1,17 +1,16 @@
 import { Typewriter } from 'react-simple-typewriter'
 import profilePic from './../../assets/1.png'
-import heroBg from './../../assets/heroBg.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-scroll"
 
 export const Home = () => {
   return (
     <section id="hero">
         <div className="container-fluid mx-auto text-gray-50">
-            <div className="hero min-h-screen p-auto bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
-                {/*<div className="hero min-h-screen" style={{ backgroundImage: `url("${heroBg}")`, filter: 'grayscale(50%) contrast(150%)' }}></div>*/}
+            <div className="hero h-screen p-auto pt-20 bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
                 <div className="hero-content flex-col md:flex-col lg:flex-row p-auto md:p-14 lg:p-auto md:gap-10">
-                    <div data-aos="fade-right">
+                    <div className="w-auto xl:w-4/5"data-aos="fade-right">
                         <h1 className="mb-5 text-5xl font-bold">
                             <Typewriter
                             words={
@@ -49,10 +48,12 @@ export const Home = () => {
                             I&apos;m I Dewa Gede Mahadi Saputra. A information system student at ITB STIKOM Bali & HELP University Malaysia who like to code (≧∀≦)ゞ
                         </p>
 
-                        <a href="#projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</a>        
-                    </div>     
+                        <Link to="projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</Link>        
+                    </div>   
+                    
+                    <div></div>
 
-                    <div className="hidden md:block indicator" data-aos="fade-left">
+                    <div className="hidden md:block indicator" data-aos="zoom-in">
                         <div className="transition-all hover:scale-105">
                             <label htmlFor="aboutModal" className="indicator-item badge border-none bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 px-4 py-5 cursor-pointer">More...</label>
                             <img src={profilePic} className="rounded-lg w-96 shadow-2xl shadow-blue-500/50 dark:shadow-slate-500/50" />
@@ -60,7 +61,6 @@ export const Home = () => {
                     </div> 
                 </div>
 
-                {/* Put this part before </body> tag */}
                 <input type="checkbox" id="aboutModal" className="modal-toggle" />
                 <div className="modal">
                     <div className="modal-box bg-blue-800 dark:bg-slate-900 text-gray-50">

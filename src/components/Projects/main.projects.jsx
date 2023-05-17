@@ -20,7 +20,7 @@ export const Projects = () => {
                         </p>  
                     </div>
 
-                    <div className="grid grid-rows-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 py-3">
+                    <div className="grid grid-rows-1 md:grid-cols-2 xl:grid-cols-3 gap-5 py-3">
                         {projects.sort((a, b) => a.title.localeCompare(b.title)).map(( { title, description, image, tags, visit }, index) => (
                             <div className="card shadow-xl image-full" data-aos="fade-up" key={index}>
                                 <figure>

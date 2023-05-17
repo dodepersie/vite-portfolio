@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
-import experienceAnimation from "./experienceAnimation.json"
+import experienceAnimation from "./experienceAnimation.json";
 
-export const ExperienceAnimate = () => {
+export const ExperienceAnimated = () => {
     return (
         <Lottie
         animationData={experienceAnimation}
