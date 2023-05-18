@@ -1,17 +1,20 @@
 import { Typewriter } from 'react-simple-typewriter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-scroll"
+import { Link } from 'react-scroll'
 
 export const Home = () => {
   return (
     <section id="hero">
-        <div className="container-fluid text-gray-50">
-            <div className="flex justify-between items-center min-h-screen bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
+        <div className="container-fluid text-gray-50 overflow-hidden">
+            <div className="flex justify-between items-center min-h-screen bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50 transition-colors duration-50">
                 <div className="flex justify-between items-end w-full flex-col lg:flex-row-reverse">
-                    <div className="hidden lg:inline-block coverBg w-3/5 min-h-screen" data-aos="fade-down"></div>
 
-                    <div className="w-full px-4 xl:py-16" data-aos="fade-right">
+                    {/* Hero image */}
+                    <div className="hidden lg:inline-block coverBg w-1/3 min-h-screen" data-aos="fade-left"></div>
+
+                    {/* Greeting */}
+                    <div className="w-full lg:w-2/3 mx-auto px-3 lg:px-8 lg:py-8" data-aos="fade-right">
                         <div className="flex flex-col gap-5 xl:w-full">
                             <h1 className="text-3xl xl:text-5xl font-bold h-12 leading-snug">
                                 I&apos;m Mahadi Saputra
@@ -34,7 +37,9 @@ export const Home = () => {
                                 &quot;Unleash your potential, ignite your passion, and embark on a transformative journey of self-discovery and success!&quot;
                             </p>
 
-                            <Link to="projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 btn-block border-0 lg:w-40"><FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects</Link>  
+                            <Link to="projects" className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0 lg:w-40">
+                                <FontAwesomeIcon icon={faArrowCircleDown} className="mr-4" />My projects
+                            </Link>  
                         </div>                          
                     </div>
                 </div>

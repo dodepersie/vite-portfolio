@@ -10,10 +10,10 @@ const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
 
 function AlertMessage(props) {
     const { message, isSuccess } = props;
-    const alertClass = isSuccess ? "alert-success" : "alert-error";
+    const alertClass = isSuccess ? "bg-blue-500 text-gray-50 dark:bg-slate-700 rounded-lg" : "bg-red-500 text-gray-50";
 
     return (
-        <div className={`alert ${alertClass} shadow-lg mt-5`}>
+        <div className={`alert ${alertClass} mb-5`}>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span>{message}</span>
@@ -57,8 +57,8 @@ export const Contact = () => {
     return (
         <section id="contact">
             <div className="container-fluid mx-auto">
-                <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800">
-                    <div className="hero-content flex-row w-full gap-14 text-black dark:text-gray-50">
+                <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-50">
+                    <div className="hero-content flex-row w-full text-black dark:text-gray-50">
                         <div className="hidden md:block w-2/5" data-aos="zoom-in">
                             <ContactAnimate />
                         </div>
@@ -72,7 +72,9 @@ export const Contact = () => {
                                 Don&apos;t be shy, friends! (o゜▽゜)o☆
                             </p>
 
-                        <form ref={form} onSubmit={sendEmail} action="/" className="grid grid-rows-1 ">
+                        {showAlert && <AlertMessage message={alertMessage} isSuccess={isSuccess} />}
+
+                        <form ref={form} onSubmit={sendEmail} action="/">
                             <div className="form-control w-full">
                                 <input type="text" name="user_name" className="input border caret-pink-500 bg-gray-100" placeholder="Your name.." required />
                             </div>
@@ -85,11 +87,10 @@ export const Contact = () => {
                                 <textarea className="textarea caret-pink-500 bg-gray-100 resize-none mt-5" name="message" placeholder="Your message.." required></textarea>
                             </div>
 
-                            <button className="btn border-none mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50" type="submit">Send</button>
-
+                            <button className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50" type="submit">Send</button>
                         </form>
 
-                        {showAlert && <AlertMessage message={alertMessage} isSuccess={isSuccess} />}
+                        <p className="text-sm mb-5 mt-5 leading-loose">Social media on footer!</p>
                         </div>
                     </div>
                 </div>

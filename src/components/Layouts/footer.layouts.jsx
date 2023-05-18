@@ -21,7 +21,7 @@ export const Footer = () => {
 
                 <div className="flex justify-items-start lg:items-center">
                     <div className="avatar inline-block mr-1">
-                        <div className="w-8 rounded-full ring ring-blue-500 dark:ring-slate-500 ring-offset-base-100 ring-offset-2 cursor-pointer">
+                        <div className="w-8 rounded-full ring ring-blue-500 ring-offset-base-100 ring-offset-2 cursor-pointer">
                             <img src={p2} alt="Mahadi Saputra's Avatar" />
                         </div>
                     </div>

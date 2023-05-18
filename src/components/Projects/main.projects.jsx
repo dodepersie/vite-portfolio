@@ -6,9 +6,9 @@ export const Projects = () => {
 
     return (
     <section id="projects">
-        <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4">
+        <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
             <div className="hero-content flex-col lg:flex-row">
-                <div className="text-base tracking-tight my-20 lg:my-auto">
+                <div className="text-base tracking-tight mt-16 lg:mt-auto">
                     <div data-aos="fade-up">
                         <div className="flex items-center text-3xl pb-4">
                             <FontAwesomeIcon icon={faTerminal} className="inline-block mr-2.5 mt-1 text-2xl" />
@@ -20,7 +20,7 @@ export const Projects = () => {
                         </p>  
                     </div>
 
-                    <div className="grid grid-rows-1 md:grid-cols-2 xl:grid-cols-3 gap-5 py-3">
+                    <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {projects.sort((a, b) => a.title.localeCompare(b.title)).map(( { title, description, image, tags, visit }, index) => (
                             <div className="card shadow-xl image-full" data-aos="fade-up" key={index}>
                                 <figure>
@@ -38,7 +38,7 @@ export const Projects = () => {
 
                                     <div className="card-actions justify-end">
                                     {tags.map(( tag, i ) => (
-                                        <div className="badge badge-primary badge-lg text-base-100 p-3 border-0 dark:bg-slate-900" key={i}>
+                                        <div className="badge badge-primary badge-lg text-base-100 p-3 border-0 dark:bg-slate-600" key={i}>
                                             {tag}
                                         </div>
                                     ))}

@@ -11,9 +11,9 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 function App() {
 
   AOS.init({
-    once: "true",
+    once: 'true',
     easing: "ease-in-out-back",
-    duration: "1500",
+    duration: "1000",
   });
 
   return (

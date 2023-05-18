@@ -34,10 +34,10 @@ export const Navbar = () => {
     };
 
     const navbarBackground = isDarkMode
-    ? (scrolled ? 'bg-slate-900 transition-colors duration-500' : 'transition-colors duration-500')
-    : (scrolled ? 'bg-white transition-colors duration-500' : 'transition-colors duration-500');
+    ? (scrolled ? 'bg-slate-700' : 'transition-colors duration-50')
+    : (scrolled ? 'bg-white' : 'transition-colors duration-50');
 
-    const navbarItems = isDarkMode ? (scrolled ? 'text-gray-50' : 'text-gray-50') : '';
+    const navbarItems = isDarkMode ? (scrolled ? 'text-gray-50 hover:bg-slate-500 focus:bg-blue-600 active:bg-slate-500' : 'text-gray-50 hover:bg-slate-500 focus:bg-blue-600 active:bg-slate-500') : 'hover:bg-blue-500 focus:bg-blue-600 hover:text-gray-50';
 
     return (
         <nav
@@ -62,7 +62,7 @@ export const Navbar = () => {
                                 duration={100} 
                                 offset={0}
                                 href={item.link}
-                                activeClass="active dark:bg-slate-500 text-black font-semibold" 
+                                activeClass="bg-slate-100 dark:bg-slate-500 text-black font-semibold" 
                                 className="hover:bg-slate-100 focus:bg-slate-200 dark:hover:bg-slate-500 dark:focus:bg-slate-600 text-black dark:text-gray-50 hover:rounded-lg my-1"
                             >
                                 {item.name}
@@ -94,7 +94,7 @@ export const Navbar = () => {
                                 duration={100} 
                                 offset={0}
                                 activeClass="active dark:bg-slate-500 text-gray-50 font-semibold" 
-                                className={`font-normal hover:bg-blue-500 focus:bg-blue-600 dark:hover:bg-slate-500 dark:focus:bg-slate-600 hover:text-gray-50 focus:text-gray-50 me-2 ${navbarItems}`}
+                                className={`font-normal me-2 ${navbarItems}`}
                             >
                                 {item.name}
                             </Link>
