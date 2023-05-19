@@ -6,45 +6,46 @@
     html {
         scroll-behavior: smooth;
     }
-      
-      ::-webkit-scrollbar {
+
+    ::-webkit-scrollbar {
         width: .5rem;
-      }
-      
-      ::-webkit-scrollbar-track {
+    }
+
+    ::-webkit-scrollbar-track {
         background-color: rgba(255, 255, 255, 0.8);
-      }
-      
-      ::-webkit-scrollbar-thumb {
+    }
+
+    ::-webkit-scrollbar-thumb {
         background-color: rgb(59, 130, 246);
-      }
-      
-      ::-webkit-scrollbar-thumb:hover {
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
         background-color: rgb(37, 99, 235);
-      }
-      
-      ::-webkit-scrollbar-thumb:active {
+    }
+
+    ::-webkit-scrollbar-thumb:active {
         background-color: rgb(30, 64, 175);
-      }
+    }
 }
 
 @layer components {
     #hero .coverBg {
         background-image: url('/img/1-t.png');
         background-size: cover;
+        z-index: 1001;
     }
 
     textarea {
         height: 150px;
     }
 
-    footer {
+    footer,
+    .headBg {
         background-color: #3586ff;
     }
 
     .wave__wrapper {
         position: relative;
-        padding-top: 2.5rem;
     }
 
     .wave {
@@ -56,7 +57,7 @@
         background-image: url('/img/wave.png');
         background-size: 1000px 100px;
     }
-    
+
     .wave1 {
         animation: wave 30s linear infinite;
         z-index: 1000;
@@ -64,7 +65,7 @@
         animation-delay: 0s;
         bottom: 0;
     }
-    
+
     .wave2 {
         animation: wave2 15s linear infinite;
         z-index: 999;
@@ -72,7 +73,7 @@
         animation-delay: -5s;
         bottom: 10px;
     }
-    
+
     .wave3 {
         animation: wave 30s linear infinite;
         z-index: 998;
@@ -80,7 +81,7 @@
         animation-delay: -2s;
         bottom: 15px;
     }
-    
+
     .wave4 {
         animation: wave2 5s linear infinite;
         z-index: 997;
@@ -88,11 +89,12 @@
         animation-delay: -5s;
         bottom: 20px;
     }
-    
+
     @keyframes wave {
         0% {
             background-position-x: 0;
         }
+
         100% {
             background-position-x: 1000px;
         }
@@ -102,8 +104,78 @@
         0% {
             background-position-x: 0;
         }
+
         100% {
             background-position-x: 1000px;
         }
     }
+
+    .wave__terbalik {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: url('/img/wave.png');
+        background-size: 1000px 100px;
+        transform: rotate(180deg);
+    }
+
+    .wave1__terbalik {
+        animation: wave__terbalik 30s linear infinite;
+        z-index: 1000;
+        opacity: 1;
+        animation-delay: 0s;
+        transform: rotate(180deg);
+        top: 0;
+    }
+
+    .wave2__terbalik {
+        animation: wave2__terbalik 15s linear infinite;
+        z-index: 999;
+        opacity: 0.5;
+        animation-delay: -5s;
+        transform: rotate(180deg);
+        top: 10px;
+    }
+
+    .wave3__terbalik {
+        animation: wave__terbalik 30s linear infinite;
+        z-index: 998;
+        opacity: 0.2;
+        animation-delay: -2s;
+        transform: rotate(180deg);
+        top: 15px;
+    }
+
+    .wave4__terbalik {
+        animation: wave2__terbalik 5s linear infinite;
+        z-index: 997;
+        opacity: 0.7;
+        animation-delay: -5s;
+        transform: rotate(180deg);
+        top: 20px;
+    }
+
+    @keyframes wave__terbalik {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: 1000px;
+        }
+    }
+
+    @keyframes wave2__terbalik {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: 1000px;
+        }
+    }
+
+
 }
