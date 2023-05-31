@@ -77,11 +77,8 @@ export const Contact = () => {
                 <div className="block md:hidden w-6/12">
                   <ContactAnimate />
                 </div>
-                <div>
+                <div className="my-3">
                   <p className="font-semibold">Contact me</p>
-                  <p className="text-sm md:text-lg my-3">
-                    Don&apos;t be shy, friends! (o゜▽゜)o☆
-                  </p>
                 </div>
               </div>
 

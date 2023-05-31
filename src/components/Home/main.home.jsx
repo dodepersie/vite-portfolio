@@ -2,6 +2,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
+import photo1 from "./../../assets/1.png";
 
 export const Home = () => {
   return (
@@ -16,19 +17,13 @@ export const Home = () => {
       <section id="hero">
         <div className="container-fluid text-gray-50 overflow-hidden">
           <div className="flex justify-between items-center min-h-screen text-black bg-gray-50 dark:bg-slate-800 dark:text-gray-50 transition-colors duration-50">
-            <div className="flex justify-between items-end w-full flex-col lg:flex-row-reverse">
-              {/* Hero image */}
-              <div
-                className="hidden lg:inline-block coverBg w-1/3 min-h-screen"
-                data-aos="fade-left"
-              ></div>
-
+            <div className="flex flex-col lg:flex-row items-center mx-auto px-3">
               {/* Greeting */}
               <div
-                className="w-full lg:w-2/3 mx-auto px-3 lg:px-8 lg:py-8"
+                className="w-full mx-auto px-3"
                 data-aos="fade-right"
               >
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col justify-start items-start gap-5">
                   <h1 className="text-3xl xl:text-5xl font-bold h-12 leading-snug">
                     I&apos;m Mahadi Saputra
                   </h1>
@@ -53,7 +48,8 @@ export const Home = () => {
                   </h3>
 
                   <p className="text-lg leading-loose">
-                    &quot;Bringing dreams to life through elegant and efficient web development.&quot;
+                    &quot;Bringing dreams to life through elegant and efficient
+                    web development.&quot;
                   </p>
 
                   <Link
@@ -67,6 +63,14 @@ export const Home = () => {
                     My projects
                   </Link>
                 </div>
+              </div>
+
+              {/* Hero image */}
+              <div
+                className="hidden lg:block"
+                data-aos="fade-left"
+              >
+                <img src={photo1} className="w-[450px] h-[350px] rounded-lg" />
               </div>
             </div>
           </div>

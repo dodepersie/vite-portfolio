@@ -99,8 +99,8 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Undangan Online / Digital Invitation",
-    description: "Digital invitation card for religion event. Build to fit small screen size. Using Laravel 10 for Back End and Vue 3 for Front End.",
+    title: "Undangan Online / Online Invitation",
+    description: "Online invitation card for religion event. Build to fit small screen size. Using Laravel 10 for Back End and Vue 3 for Front End.",
     image: p7,
     tags: ["Laravel", "Tailwind", "Vue"],
     source: "https://github.com/dodepersie",

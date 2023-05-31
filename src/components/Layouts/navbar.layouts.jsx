@@ -104,8 +104,9 @@ export const Navbar = () => {
         </a>
 
         <div className="mt-1 mx-1">
-          <label className="cursor-pointer">
+          <label htmlFor="toggleDarkMode" className="cursor-pointer">
             <input
+              id="toggleDarkMode"
               type="checkbox"
               checked={isDarkMode}
               onChange={toggleDarkMode}

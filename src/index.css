@@ -29,11 +29,6 @@
 }
 
 @layer components {
-    #hero .coverBg {
-        background-image: url('/img/1-t.png');
-        background-size: cover;
-        z-index: 1001;
-    }
 
     textarea {
         height: 150px;
