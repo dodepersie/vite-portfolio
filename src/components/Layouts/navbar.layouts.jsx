@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNavicon } from "@fortawesome/free-solid-svg-icons";
+import { faNavicon, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { useDarkMode } from "../Utilities/usedark.utilities";
 import { Link } from "react-scroll";
 
@@ -103,13 +103,22 @@ export const Navbar = () => {
           Mahadi Saputra
         </a>
 
-        <div className="mt-2 mx-1.5">
-          <input
-            type="checkbox"
-            className="toggle"
-            checked={isDarkMode}
-            onChange={toggleDarkMode}
-          />
+        <div className="mt-1 mx-1">
+          <label className="cursor-pointer">
+            <input
+              type="checkbox"
+              checked={isDarkMode}
+              onChange={toggleDarkMode}
+              className="hidden"
+            />
+            <span className="text-lg">
+              {isDarkMode ? (
+                <FontAwesomeIcon className="text-gray-50" icon={faMoon} />
+              ) : (
+                <FontAwesomeIcon icon={faSun} />
+              )}
+            </span>
+          </label>
         </div>
       </div>
 

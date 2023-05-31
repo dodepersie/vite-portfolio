@@ -28,7 +28,7 @@ export const Home = () => {
                 className="w-full lg:w-2/3 mx-auto px-3 lg:px-8 lg:py-8"
                 data-aos="fade-right"
               >
-                <div className="flex flex-col gap-5 xl:w-full">
+                <div className="flex flex-col gap-5">
                   <h1 className="text-3xl xl:text-5xl font-bold h-12 leading-snug">
                     I&apos;m Mahadi Saputra
                   </h1>
@@ -53,9 +53,7 @@ export const Home = () => {
                   </h3>
 
                   <p className="text-lg leading-loose">
-                    &quot;Unleash your potential, ignite your passion, and
-                    embark on a transformative journey of self-discovery and
-                    success!&quot;
+                    &quot;Bringing dreams to life through elegant and efficient web development.&quot;
                   </p>
 
                   <Link
@@ -64,7 +62,7 @@ export const Home = () => {
                   >
                     <FontAwesomeIcon
                       icon={faArrowCircleDown}
-                      className="mr-4"
+                      className="mr-4 animate-bounce"
                     />
                     My projects
                   </Link>

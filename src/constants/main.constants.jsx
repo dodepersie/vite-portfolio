@@ -6,12 +6,13 @@ import p3 from "./../assets/projects/3.png"; // v1 Portfolio
 import p4 from "./../assets/projects/4.png"; // v2 Portfolio
 import p5 from "./../assets/projects/5.png"; // Laravel BLog
 import p6 from "./../assets/projects/6.png"; // v3 Portfolio
+import p7 from "./../assets/projects/7.png"; // Undangan Online
 
 export const techStack = [
   {
-    logo: faHashtag,
+    logo: faCode,
     name: "frame_work",
-    dec: "Bootstrap, Laravel, Next JS, React, Tailwind (daisyUI, Flowbite, nextUI) & etc",
+    dec: "Bootstrap, Laravel, Next JS, React, Tailwind (daisyUI, Flowbite, nextUI), Vue & still learning more",
   },
   {
     logo: faUsers,
@@ -19,9 +20,9 @@ export const techStack = [
     dec: "Can collaborate with friends and also using GitHub",
   },
   {
-    logo: faCode,
+    logo: faHashtag,
     name: "web_dev",
-    dec: "Cloudflare, cPanel, mySQL, Netlify, Vercel",
+    dec: "Cloudflare, cPanel, Database, Netlify, Vercel",
   },
 ];
 
@@ -95,5 +96,14 @@ export const projects = [
     tags: ["React", "Tailwind"],
     source: "https://github.com/dodepersie/vite-portfolio",
     visit: "/",
+  },
+  {
+    id: 7,
+    title: "Undangan Online / Digital Invitation",
+    description: "Digital invitation card for religion event. Build to fit small screen size. Using Laravel 10 for Back End and Vue 3 for Front End.",
+    image: p7,
+    tags: ["Laravel", "Tailwind", "Vue"],
+    source: "https://github.com/dodepersie",
+    visit: "https://210623.mahadisaputra.my.id/",
   },
 ];

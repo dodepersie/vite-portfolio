@@ -10,7 +10,7 @@ export const Projects = () => {
           <div className="hero-content flex-col lg:flex-row">
             <div className="text-base tracking-tight mt-16 lg:mt-auto">
               <div data-aos="fade-up">
-                <div className="flex items-center text-3xl pb-4">
+                <div className="flex justify-start items-center text-3xl md:mt-10 pb-4">
                   <FontAwesomeIcon
                     icon={faTerminal}
                     className="inline-block mr-2.5 mt-1 text-2xl"
@@ -24,7 +24,7 @@ export const Projects = () => {
                 </p>
               </div>
 
-              <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {projects
                   .sort((a, b) => a.title.localeCompare(b.title))
                   .map(({ title, description, image, tags, visit }, index) => (
@@ -40,8 +40,7 @@ export const Projects = () => {
                       <div className="card-body">
                         <h2 className="card-title">
                           <div
-                            className="tooltip tooltip-right tooltip-primary"
-                            data-tip="Click to visit"
+                            className="text-left leading-relaxed"
                           >
                             <a href={visit} target="_blank" rel="noreferrer">
                               {title}

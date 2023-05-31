@@ -64,22 +64,26 @@ export const Contact = () => {
     <section id="contact">
       <div className="container-fluid mx-auto">
         <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-50">
-          <div className="hero-content flex-row w-full text-black dark:text-gray-50">
+          <div className="hero-content flex-col md:flex-row w-full text-black dark:text-gray-50">
             <div className="hidden md:block w-2/5" data-aos="zoom-in">
               <ContactAnimate />
             </div>
 
             <div
-              className="text-base text-center md:text-left w-full"
+              className="text-base text-left w-full"
               data-aos="fade-right"
             >
-              <h1 className="mb-5 text-4xl font-semibold">
-                <FontAwesomeIcon icon={faContactCard} /> Contact me
-              </h1>
-
-              <p className="text-lg mb-5 leading-loose">
-                Don&apos;t be shy, friends! (o゜▽゜)o☆
-              </p>
+              <div className="flex flex-row justify-center md:justify-start items-center text-4xl">
+                <div className="block md:hidden w-6/12">
+                  <ContactAnimate />
+                </div>
+                <div>
+                  <p className="font-semibold">Contact me</p>
+                  <p className="text-sm md:text-lg my-3">
+                    Don&apos;t be shy, friends! (o゜▽゜)o☆
+                  </p>
+                </div>
+              </div>
 
               {showAlert && (
                 <AlertMessage message={alertMessage} isSuccess={isSuccess} />
@@ -124,7 +128,8 @@ export const Contact = () => {
               </form>
 
               <p className="text-xs text-left mb-5 mt-5 leading-loose">
-                *If you want to contact me on my social media, please see the footer!
+                *If you want to contact me on my social media, please see the
+                footer!
               </p>
             </div>
           </div>
