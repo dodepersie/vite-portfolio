@@ -43,10 +43,11 @@ export const Projects = () => {
                     640: {
                       direction: "ttb",
                       focus: "center",
-                      height: "30rem",
-                      pagination: false,
+                      height: "25rem",
                       perPage: 2,
-                      width: "100%",
+                      gap: "6rem",
+                      padding: ".3rem",
+                      pagination: false,
                     },
                     1024: {
                       height: "21rem",

@@ -54,7 +54,7 @@ export const Home = () => {
 
                   <Link
                     to="projects"
-                    className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0 lg:w-40"
+                    className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0 w-full lg:w-40"
                   >
                     <FontAwesomeIcon
                       icon={faArrowCircleDown}

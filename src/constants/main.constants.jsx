@@ -45,7 +45,6 @@ export const projects = [
       "To find estimate of how many matches you need to get the Win Rate you want.",
     image: p2,
     tags: ["Bootstrap", "JS", "HTML", "CSS"],
-    source: "https://github.com/dodepersie/penghitung-wr-mlbb",
     visit: "http://penghitung-wr-mlbb.vercel.app/",
   },
   {
@@ -55,7 +54,6 @@ export const projects = [
       "See popular movies, see playing movies on cinema and search for movies! API provided by TMDB.",
     image: p1,
     tags: ["Next UI", "React"],
-    source: "https://github.com/dodepersie/movie-api-by-tmdb",
     visit: "http://movie-api-by-tmdb.vercel.app/",
   },
   {
@@ -65,17 +63,15 @@ export const projects = [
       "Mahadi Saputra's first & complete portfolio website. This website is in Indonesian Language.",
     image: p3,
     tags: ["Bootstrap", "CSS", "React"],
-    source: "https://github.com/dodepersie/landing",
     visit: "https://v1.mahadisaputra.my.id/",
   },
   {
     id: 4,
     title: "v2 Portfolio",
     description:
-      "Mahadi Saputra's second portfolio website created with Next JS!",
+      "Mahadi Saputra's second portfolio website created with Next JS. And tutorial from JSMastery YouTube",
     image: p4,
     tags: ["Next JS", "Style Components"],
-    source: "https://github.com/dodepersie/nextjs-portofolio",
     visit: "https://v2.mahadisaputra.my.id/",
   },
   {
@@ -85,25 +81,22 @@ export const projects = [
       "This my blog where I'll share my experiences and also a ✨ little ✨ thing that I know.",
     image: p5,
     tags: ["Laravel", "Tailwind"],
-    source: "https://github.com/dodepersie",
     visit: "http://blog.mahadisaputra.my.id/",
   },
   {
     id: 6,
     title: "v3 Portfolio",
-    description: "You are on this site now! Here is my v3 Portfolio",
+    description: "You are on this site now! Here is my v3 Portfolio and I still updating this site to make it more aesthetic",
     image: p6,
     tags: ["React", "Tailwind"],
-    source: "https://github.com/dodepersie/vite-portfolio",
     visit: "/",
   },
   {
     id: 7,
-    title: "Undangan Online / Online Invitation",
-    description: "Online invitation card for religion event. Build to fit small screen size. Using Laravel 10 for Back End and Vue 3 for Front End.",
+    title: "Online Invitation",
+    description: "Online invitation card for religion event. Build to fit small screen size using Laravel & Vue",
     image: p7,
     tags: ["Laravel", "Tailwind", "Vue"],
-    source: "https://github.com/dodepersie",
     visit: "https://210623.mahadisaputra.my.id/",
   },
 ];
