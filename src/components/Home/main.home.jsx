@@ -7,13 +7,6 @@ import photo1 from "./../../assets/1.png";
 export const Home = () => {
   return (
     <>
-      <div className="wave__wrapper">
-        <div className="wave__terbalik wave1__terbalik"></div>
-        <div className="wave__terbalik wave2__terbalik"></div>
-        <div className="wave__terbalik wave3__terbalik"></div>
-        <div className="wave__terbalik wave4__terbalik"></div>
-      </div>
-
       <section id="hero">
         <div className="container-fluid text-gray-50 overflow-hidden">
           <div className="flex justify-between items-center min-h-screen text-black bg-gray-50 dark:bg-slate-800 dark:text-gray-50 transition-colors duration-50">
@@ -70,7 +63,7 @@ export const Home = () => {
                 className="hidden lg:block"
                 data-aos="fade-left"
               >
-                <img src={photo1} className="w-[450px] h-[350px] rounded-lg" />
+                <img src={photo1} className="w-[450px] h-[350px] rounded-lg shadow-xl" />
               </div>
             </div>
           </div>

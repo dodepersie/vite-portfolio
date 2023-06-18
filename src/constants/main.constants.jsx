@@ -12,7 +12,7 @@ export const techStack = [
   {
     logo: faCode,
     name: "frame_work",
-    dec: "Bootstrap, Laravel, Next JS, React, Tailwind (daisyUI, Flowbite, nextUI), Vue & still learning more",
+    dec: "Bootstrap, Laravel, Next.js, Next UI, React, Tailwind (daisyUI, Flowbite & etc), Vue & still learning more",
   },
   {
     logo: faUsers,

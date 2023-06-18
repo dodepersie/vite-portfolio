@@ -9,6 +9,7 @@ export const NotFound = () => {
 
   return (
     <section id="main">
+
       <div className="container-fluid mx-auto text-gray-50">
         <div className="hero min-h-screen p-auto bg-gray-50 text-black dark:bg-slate-800 dark:text-gray-50">
           <div className="hero-content flex-col-reverse lg:flex-row p-auto md:p-14 lg:p-auto gap-10">
