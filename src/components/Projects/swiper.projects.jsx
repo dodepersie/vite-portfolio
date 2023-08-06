@@ -6,25 +6,24 @@ const ProjectSwiper = () => {
     <Splide
       options={{
         arrows: false,
-        focus: 0,
+        focus: "center",
         rewind: true,
         width: 900,
-        autoHeight: true,
+        height: 490,
         wheel: true,
-        perPage: 1,
+        gap: "1rem",
         breakpoints: {
           640: {
             direction: "ttb",
             focus: "center",
-            height: "30rem",
             autoWidth: true,
             gap: "1rem",
-            perPage: 1,
             type: "loop",
           },
           1024: {
-            height: "35rem",
-            width: 760,
+            direction: "ttb",
+            focus: "center",
+            type: "loop",
           },
         },
       }}
@@ -32,11 +31,11 @@ const ProjectSwiper = () => {
     >
       {projects.map(({ title, description, image, tags, visit }, i) => (
         <SplideSlide key={i}>
-          <div className="card bg-base-100 dark:bg-slate-900 border border-gray-200">
+          <div className="card bg-base-100 dark:bg-slate-900 border border-gray-200 dark:border-0 h-[450px] hover:shadow-md hover:bg-gray-100 dark:hover:bg-slate-700">
             <figure>
-              <img src={image} alt={title} />
+              <img src={image} alt={title} className="bg-cover" />
             </figure>
-            <div className="card-body">
+            <div className="card-body border-t border-blue-500 dark:border-slate-500">
               <h2 className="card-title">{title}</h2>
               <p>{description}</p>
               <div className="mt-5 inline-flex justify-between">

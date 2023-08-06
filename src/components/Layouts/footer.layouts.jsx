@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -7,6 +8,28 @@ import {
 import p2 from "./../../assets/2.jpg";
 
 export const Footer = () => {
+  const [currentTime, setCurrentDateTime] = useState("");
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentDate = new Date();
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      };
+      const formattedDateTime = currentDate.toLocaleString("en-US", options).replace("at", "-");
+      setCurrentDateTime(formattedDateTime);
+    }, 1000);    
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
     <>
       <div className="wave__wrapper">
@@ -60,7 +83,7 @@ export const Footer = () => {
           </div>
 
           <p className="text-xs md:text-sm">
-            By Mahadi Saputra @ 2023 ✨
+            By Mahadi Saputra @ {currentTime} ✨
           </p>
         </div>
       </footer>

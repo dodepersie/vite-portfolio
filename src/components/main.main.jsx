@@ -8,7 +8,7 @@ import { Contact } from "./Contact/main.contact";
 
 export const Main = () => {
   return (
-    <div className="container-fluid mx-auto">
+    <div className="container-fluid">
       <Navbar />
       <Home />
       <Projects />

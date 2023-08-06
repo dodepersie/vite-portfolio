@@ -23,6 +23,7 @@ function App() {
         <div className="select-none" data-theme="light">
           <ScrollToTop
             style={{ zIndex: "1001", right: "15px", bottom: "20px" }}
+            className="dark:bg-slate-500 dark:text-gray-50"
             component={<FontAwesomeIcon icon={faChevronUp} />}
           />
           <Routes>

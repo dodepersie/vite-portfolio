@@ -17,24 +17,13 @@ export const techStack = [
   {
     logo: faUsers,
     name: "team_work",
-    dec: "Can collaborate with friends and also using GitHub",
+    dec: "Can collaborate with friends using GitHub",
   },
   {
     logo: faHashtag,
     name: "web_dev",
     dec: "Cloudflare, cPanel, Database, Netlify, Vercel",
   },
-];
-
-export const skills = [
-  { title: "CSS", percentage: 80 },
-  { title: "Github", percentage: 85 },
-  { title: "HTML", percentage: 85 },
-  { title: "Laravel", percentage: 80 },
-  { title: "PHP", percentage: 80 },
-  { title: "React", percentage: 80 },
-  { title: "Tailwind", percentage: 85 },
-  { title: "Web", percentage: 80 },
 ];
 
 export const projects = [
@@ -51,7 +40,7 @@ export const projects = [
     id: 2,
     title: "MoofliXXI",
     description:
-      "See popular movies, see playing movies on cinema and search for movies! API provided by TMDB.",
+      "See popular movies, see playing movies on cinema and search for movies!",
     image: p1,
     tags: ["Next UI", "React"],
     visit: "http://movie-api-by-tmdb.vercel.app/",
@@ -69,7 +58,7 @@ export const projects = [
     id: 4,
     title: "v2 Portfolio",
     description:
-      "Mahadi Saputra's second portfolio website created with Next JS. And tutorial from JSMastery YouTube",
+      "Mahadi Saputra's second portfolio website created with Next JS.",
     image: p4,
     tags: ["Next JS", "Style Components"],
     visit: "https://v2.mahadisaputra.my.id/",
@@ -86,7 +75,7 @@ export const projects = [
   {
     id: 6,
     title: "v3 Portfolio",
-    description: "You are on this site now! Here is my v3 Portfolio and I still updating this site to make it more aesthetic",
+    description: "You are on this site now! Here is my v3 Portfolio & I still updating this site to make it more aesthetic.",
     image: p6,
     tags: ["React", "Tailwind"],
     visit: "/",

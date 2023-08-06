@@ -73,10 +73,10 @@ export const Contact = () => {
               className="text-base text-left w-full"
               data-aos="fade-right"
             >
-              <div className="flex flex-row justify-center md:justify-start items-center text-4xl">
-                <div className="block md:hidden w-6/12">
-                  <ContactAnimate />
-                </div>
+              <div className="flex flex-row justify-start items-center gap-2 text-4xl">
+              <div>
+                <FontAwesomeIcon icon={faContactCard} />
+              </div>
                 <div className="my-3">
                   <p className="font-semibold">Contact me</p>
                 </div>
@@ -91,7 +91,7 @@ export const Contact = () => {
                   <input
                     type="text"
                     name="user_name"
-                    className="input border caret-pink-500 bg-gray-100"
+                    className="input caret-pink-500 bg-gray-100"
                     placeholder="Your name.."
                     required
                   />
@@ -101,7 +101,7 @@ export const Contact = () => {
                   <input
                     type="email"
                     name="user_email"
-                    className="input border caret-pink-500 bg-gray-100 mt-5"
+                    className="input caret-pink-500 bg-gray-100 mt-5"
                     placeholder="Your email.."
                     required
                   />
