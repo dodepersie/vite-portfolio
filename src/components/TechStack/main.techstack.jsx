@@ -7,7 +7,7 @@ export const TechStack = () => {
   return (
     <section id="tech-stack">
       <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
-        <div className="hero-content flex-row w-full gap-10 p-5">
+        <div className="hero-content flex-row w-full gap-10 py-16 px-7">
           <div className="text-base w-full md:w-3/5 p-auto md:p-4 lg:p-auto">
             <h1 className="mb-5 text-3xl font-semibold" data-aos="fade-up">
               <FontAwesomeIcon icon={faDollarSign} /> tech_stack

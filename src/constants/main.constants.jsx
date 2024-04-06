@@ -1,5 +1,3 @@
-import { faCode, faUsers, faHashtag } from "@fortawesome/free-solid-svg-icons";
-
 import p1 from "./../assets/projects/1.png"; // MoofliXXI
 import p2 from "./../assets/projects/2.png"; // MLBB WR Counter
 import p3 from "./../assets/projects/3.png"; // v1 Portfolio
@@ -7,24 +5,6 @@ import p4 from "./../assets/projects/4.png"; // v2 Portfolio
 import p5 from "./../assets/projects/5.png"; // Laravel BLog
 import p6 from "./../assets/projects/6.png"; // v3 Portfolio
 import p7 from "./../assets/projects/7.png"; // Undangan Online
-
-// export const techStack = [
-//   {
-//     logo: faCode,
-//     name: "frame_work",
-//     dec: "Bootstrap, Laravel, Next.js, Next UI, React, Tailwind (daisyUI, Flowbite & etc), Vue & still learning more",
-//   },
-//   {
-//     logo: faUsers,
-//     name: "team_work",
-//     dec: "Can collaborate with friends using GitHub",
-//   },
-//   {
-//     logo: faHashtag,
-//     name: "web_dev",
-//     dec: "Cloudflare, cPanel, Database, Netlify, Vercel",
-//   },
-// ];
 
 export const techStack = [
   {
