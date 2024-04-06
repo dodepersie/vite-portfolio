@@ -63,20 +63,17 @@ export const Contact = () => {
   return (
     <section id="contact">
       <div className="container-fluid mx-auto">
-        <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 transition-colors duration-50">
-          <div className="hero-content flex-col md:flex-row w-full text-black dark:text-gray-50">
+        <div className="hero min-h-screen bg-blue-700 dark:bg-slate-900 transition-colors duration-50">
+          <div className="hero-content flex-col md:flex-row w-full text-gray-50">
             <div className="hidden md:block w-2/5" data-aos="zoom-in">
               <ContactAnimate />
             </div>
 
-            <div
-              className="text-base text-left w-full"
-              data-aos="fade-right"
-            >
-              <div className="flex flex-row justify-start items-center gap-2 text-4xl">
-              <div>
-                <FontAwesomeIcon icon={faContactCard} />
-              </div>
+            <div className="text-base text-left w-full" data-aos="fade-right">
+              <div className="flex flex-row justify-start items-center gap-3 text-4xl">
+                <div>
+                  <FontAwesomeIcon icon={faContactCard} />
+                </div>
                 <div className="my-3">
                   <p className="font-semibold">Contact me</p>
                 </div>

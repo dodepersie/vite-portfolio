@@ -6,23 +6,28 @@ export const Projects = () => {
   return (
     <>
       <section id="projects">
-        <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
-          <div className="hero-content flex-wrap">
-            <div className="text-base tracking-tight mt-auto" data-aos="fade-up">
-                <div className="inline-flex flex-wrap justify-start items-center text-3xl pb-4">
-                  <FontAwesomeIcon
-                    icon={faTerminal}
-                    className="inline-block mr-2.5 mt-1 text-2xl"
-                  />
-                  <h2 className="font-semibold my-2">Recent Projects</h2>
-                </div>
+        <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
+          <div className="hero-content px-5 py-10">
+            <div
+              className="lg:grid grid-cols-6 gap-10 justify-between text-base tracking-tight mt-auto"
+              data-aos="fade-up"
+            >
+              <div className="col-span-3 inline-flex flex-col justify-center items-center lg:items-start pb-4 gap-4 mb-5 w-full">
+                <FontAwesomeIcon
+                  icon={faTerminal}
+                  className="inline-block mr-2.5 mt-1 text-xl lg:text-3xl"
+                />
+                <h3 className="my-2 text-3xl lg:text-5xl text-black dark:text-white">
+                  My Recent
+                </h3>
+                <h1 className="font-semibold text-5xl lg:text-7xl text-blue-700 dark:text-blue-400">
+                  Projects
+                </h1>
+              </div>
 
-                <p className="mb-5 font-normal text-md lg:text-lg leading-loose">
-                  I&apos;ve done some projects by myself & I&apos;m a Front-End
-                  addict and currently learning about Back-End (≧∇≦)ﾉ
-                </p>
-
+              <div className="col-span-3">
                 <ProjectSwiper />
+              </div>
             </div>
           </div>
         </div>

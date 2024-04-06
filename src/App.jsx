@@ -1,8 +1,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import '@splidejs/splide/css';
-import '@splidejs/splide/css/skyblue';
-import '@splidejs/splide/css/core';
+import "@splidejs/splide/css";
+import "@splidejs/splide/css/skyblue";
+import "@splidejs/splide/css/core";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Main } from "./components/main.main";
@@ -13,24 +13,23 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   AOS.init({
-    once: "true",
     easing: "ease-in-out-back",
-    duration: "750",
+    duration: "1000",
   });
 
   return (
     <Router>
-        <div className="select-none" data-theme="light">
-          <ScrollToTop
-            style={{ zIndex: "1001", right: "15px", bottom: "20px" }}
-            className="dark:bg-slate-500 dark:text-gray-50"
-            component={<FontAwesomeIcon icon={faChevronUp} />}
-          />
-          <Routes>
-            <Route exact path="/" element={<Main />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+      <div className="select-none" data-theme="light">
+        <ScrollToTop
+          style={{ zIndex: "1001", right: "15px", bottom: "20px" }}
+          className="dark:bg-slate-500 dark:text-gray-50"
+          component={<FontAwesomeIcon icon={faChevronUp} />}
+        />
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

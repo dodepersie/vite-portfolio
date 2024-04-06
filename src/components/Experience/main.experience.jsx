@@ -6,8 +6,8 @@ export const Experience = () => {
   return (
     <>
       <section id="experience">
-        <div className="hero min-h-screen bg-gray-50 dark:bg-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
-          <div className="hero-content flex-col-reverse md:flex-row">
+        <div className="hero min-h-screen bg-gradient-to-br from-blue-300 to-white dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
+          <div className="hero-content flex-col-reverse md:flex-row p-5">
             <div
               className="hidden md:block w-2/5 md:w-3/5 lg:w-1/3"
               data-aos="zoom-in"
