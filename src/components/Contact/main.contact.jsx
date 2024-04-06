@@ -45,6 +45,28 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Basic validation
+    const userName = form.current.user_name.value.trim();
+    const userEmail = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!userName || !userEmail || !message) {
+      setAlertMessage("Please fill in all fields.");
+      setIsSuccess(false);
+      setShowAlert(true);
+      return; // Stop the function if validation fails
+    }
+
+    // Simple email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(userEmail)) {
+      setAlertMessage("Please enter a valid email address.");
+      setIsSuccess(false);
+      setShowAlert(true);
+      return; // Stop the function if validation fails
+    }
+
     setIsSending(true);
 
     emailjs

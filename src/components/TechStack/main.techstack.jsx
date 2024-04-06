@@ -23,16 +23,18 @@ export const TechStack = () => {
 
             <div className="flex flex-wrap items-center">
               <div className="grid grid-cols-6 lg:grid-cols-12 justify-center items-center gap-10">
-                {techStack.map((item, index) => (
-                  <div
-                    data-aos="fade-up"
-                    className="col-span-2 lg:col-span-2 justify-center items-center"
-                    key={index}
-                  >
-                    <img src={item.icon} alt={item.name} />
-                    <h2 className="text-md text-center mt-4">{item.name}</h2>
-                  </div>
-                ))}
+                {techStack
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map((item, index) => (
+                    <div
+                      data-aos="fade-up"
+                      className="col-span-2 lg:col-span-2 justify-center items-center"
+                      key={index}
+                    >
+                      <img src={item.icon} alt={item.name} />
+                      <h2 className="text-md text-center mt-4">{item.name}</h2>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>

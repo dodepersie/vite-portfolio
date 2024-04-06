@@ -58,6 +58,9 @@ export const Experience = () => {
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
+              <p>Still looking for a work experience..</p>
+
+              {/*
               {workingExp.map((workingExp, index) => {
                 return (
                   <div className="flex items-center" key={index}>
@@ -83,6 +86,7 @@ export const Experience = () => {
                   </div>
                 );
               })}
+              */}
             </div>
           </div>
         </div>
