@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { techStack } from "../../constants/main.constants";
 import { TechStackAnimated } from "../../assets/lottie/techStackAnimation/techStackAnimation";
 
@@ -10,11 +10,11 @@ export const TechStack = () => {
         <div className="hero-content flex-row w-full gap-10 py-16 px-7">
           <div className="text-base w-full md:w-3/5 p-auto md:p-4 lg:p-auto">
             <h1 className="mb-5 text-3xl font-semibold" data-aos="fade-up">
-              <FontAwesomeIcon icon={faDollarSign} /> tech_stack
+              <FontAwesomeIcon icon={faCode} className="me-2" /> tech_stack
             </h1>
 
             <p
-              className="my-10 font-normal text-md lg:text-lg leading-loose"
+              className="my-10 font-normal text-[18px] lg:text-[20px] leading-loose"
               data-aos="fade-up"
             >
               Here you can see what I&apos;ve learning. I am learning day by day

@@ -3,14 +3,14 @@ import { education, workingExp } from "../../constants/main.constants";
 
 export const Experience = () => {
   return (
-    <section id="experience">
+    <section id="about-me">
       <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
         <div className="hero-content flex-col py-20 px-5">
           <h1 className="text-3xl lg:text-5xl">About Me</h1>
           <div className="flex flex-col items-center mb-10">
             <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400 mb-10"></div>
 
-            <p className="text-[16px] lg:text-[18px] text-center leading-loose">
+            <p className="text-[18px] lg:text-[20px] text-center leading-loose">
               I'm a curious person and currently working on my Final Project to
               complete my university
             </p>

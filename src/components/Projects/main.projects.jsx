@@ -1,4 +1,3 @@
-import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProjectSwiper from "./swiper.projects";
 
@@ -11,17 +10,16 @@ export const Projects = () => {
             className="lg:grid grid-cols-6 gap-10 justify-between text-base tracking-tight mt-auto"
             data-aos="fade-up"
           >
-            <div className="col-span-3 inline-flex flex-col justify-center items-center lg:items-start pb-4 gap-4 mb-5 w-full">
-              <FontAwesomeIcon
-                icon={faTerminal}
-                className="inline-block mr-2.5 mt-1 text-xl lg:text-3xl"
-              />
+            <div className="col-span-3 flex flex-col justify-center items-center pb-4 gap-4">
               <h3 className="my-2 text-3xl lg:text-5xl text-black dark:text-white">
                 My Recent
               </h3>
               <h1 className="font-semibold text-5xl lg:text-7xl text-blue-700 dark:text-blue-400">
                 Projects
               </h1>
+              <p className="text-[18px] lg:text-[20px] my-5">
+                Some projects that I've made~
+              </p>
             </div>
 
             <div className="col-span-3">

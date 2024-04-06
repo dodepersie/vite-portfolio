@@ -38,26 +38,33 @@ function AlertMessage(props) {
 
 export const Contact = () => {
   const [showAlert, setShowAlert] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
-    emailjs.sendForm(serviceKey, templateKey, form.current, apiKey).then(
-      (result) => {
-        setShowAlert(true);
-        e.target.reset();
-        setAlertMessage("Message sent successfully!");
-        setIsSuccess(true);
-      },
-      (error) => {
-        setShowAlert(true);
-        setAlertMessage("Error sending message. Try again later!");
-        setIsSuccess(false);
-      }
-    );
+    emailjs
+      .sendForm(serviceKey, templateKey, form.current, apiKey)
+      .then(
+        (result) => {
+          setShowAlert(true);
+          e.target.reset();
+          setAlertMessage("Message sent successfully!");
+          setIsSuccess(true);
+        },
+        (error) => {
+          setShowAlert(true);
+          setAlertMessage("Error sending message. Try again later!");
+          setIsSuccess(false);
+        }
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
@@ -69,9 +76,9 @@ export const Contact = () => {
           </div>
 
           <div className="text-base text-left w-full" data-aos="fade-right">
-            <div className="flex flex-row justify-start items-center gap-3 text-4xl">
+            <div className="flex flex-row justify-start items-center gap-3 text-4xl mb-5">
               <div>
-                <FontAwesomeIcon icon={faContactCard} />
+                <FontAwesomeIcon icon={faContactCard} className="me-2" />
               </div>
               <div className="my-3">
                 <p className="font-semibold">Contact me</p>
@@ -87,7 +94,7 @@ export const Contact = () => {
                 <input
                   type="text"
                   name="user_name"
-                  className="input caret-pink-500 bg-gray-100"
+                  className="input caret-pink-500 bg-gray-100 text-black"
                   placeholder="Your name.."
                   required
                 />
@@ -97,7 +104,7 @@ export const Contact = () => {
                 <input
                   type="email"
                   name="user_email"
-                  className="input caret-pink-500 bg-gray-100 mt-5"
+                  className="input caret-pink-500 bg-gray-100 text-black mt-5"
                   placeholder="Your email.."
                   required
                 />
@@ -105,7 +112,7 @@ export const Contact = () => {
 
               <div className="form-control w-full">
                 <textarea
-                  className="textarea caret-pink-500 bg-gray-100 resize-none mt-5"
+                  className="textarea caret-pink-500 bg-gray-100 resize-none text-black mt-5"
                   name="message"
                   placeholder="Your message.."
                   required
@@ -113,17 +120,13 @@ export const Contact = () => {
               </div>
 
               <button
-                className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 text-gray-50"
+                className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 text-gray-50 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50"
                 type="submit"
+                disabled={isSending}
               >
-                Send
+                {isSending ? "Sending..." : "Send"}
               </button>
             </form>
-
-            <p className="text-xs text-left mb-5 mt-5 leading-loose">
-              *If you want to contact me on my social media, please see the
-              footer!
-            </p>
           </div>
         </div>
       </div>

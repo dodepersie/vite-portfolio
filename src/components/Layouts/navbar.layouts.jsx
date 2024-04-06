@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTerminal,
-  faCheck,
-  faDollarSign,
+  faUserNinja,
+  faCode,
+  faBriefcase,
   faContactCard,
   faMoon,
   faSun,
@@ -14,9 +14,9 @@ import { useDarkMode } from "../Utilities/usedark.utilities";
 import { Link } from "react-scroll";
 
 const menuLink = [
-  { icon: faCheck, link: "experience", name: "About Me" },
-  { icon: faDollarSign, link: "tech-stack", name: "Tech Stack" },
-  { icon: faTerminal, link: "projects", name: "Projects" },
+  { icon: faUserNinja, link: "about-me", name: "About Me" },
+  { icon: faCode, link: "tech-stack", name: "Tech Stack" },
+  { icon: faBriefcase, link: "projects", name: "Projects" },
   { icon: faContactCard, link: "contact", name: "Contact" },
 ];
 
