@@ -15,8 +15,8 @@ import { Link } from "react-scroll";
 
 const menuLink = [
   { icon: faCheck, link: "experience", name: "About Me" },
-  { icon: faTerminal, link: "projects", name: "Projects" },
   { icon: faDollarSign, link: "tech-stack", name: "Tech Stack" },
+  { icon: faTerminal, link: "projects", name: "Projects" },
   { icon: faContactCard, link: "contact", name: "Contact" },
 ];
 
