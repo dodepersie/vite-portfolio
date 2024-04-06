@@ -14,8 +14,8 @@ import { useDarkMode } from "../Utilities/usedark.utilities";
 import { Link } from "react-scroll";
 
 const menuLink = [
+  { icon: faCheck, link: "experience", name: "About Me" },
   { icon: faTerminal, link: "projects", name: "Projects" },
-  { icon: faCheck, link: "experience", name: "Experience" },
   { icon: faDollarSign, link: "tech-stack", name: "Tech Stack" },
   { icon: faContactCard, link: "contact", name: "Contact" },
 ];
@@ -32,8 +32,15 @@ export const Navbar = () => {
     <>
       <div className="block lg:hidden">
         <label className="btn btn-circle fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50">
-          <input type="checkbox" className="hidden" onClick={handleCollapsible} />
-          <FontAwesomeIcon icon={isCollapsed ? faNavicon : faTimes} className="text-lg" />
+          <input
+            type="checkbox"
+            className="hidden"
+            onClick={handleCollapsible}
+          />
+          <FontAwesomeIcon
+            icon={isCollapsed ? faNavicon : faTimes}
+            className="text-lg"
+          />
         </label>
       </div>
 

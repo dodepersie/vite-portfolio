@@ -11,9 +11,9 @@ export const Main = () => {
     <div className="container-fluid mx-auto">
       <Navbar />
       <Home />
-      <Projects />
       <Experience />
       <TechStack />
+      <Projects />
       <Contact />
       <Footer />
     </div>

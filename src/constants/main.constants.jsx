@@ -6,6 +6,43 @@ import p5 from "./../assets/projects/5.png"; // Laravel BLog
 import p6 from "./../assets/projects/6.png"; // v3 Portfolio
 import p7 from "./../assets/projects/7.png"; // Undangan Online
 
+import helpLogo from "./../assets/edu/help.png";
+import stikomLogo from "./../assets/edu/stikom.png";
+
+export const education = [
+  {
+    logo: helpLogo,
+    name: "HELP University",
+    desc: "Bachelor of Information Technology Honours Degree",
+    year: "September 2019 - present",
+    link: "https://university.help.edu.my/",
+  },
+  {
+    logo: stikomLogo,
+    name: "Institut Teknologi dan Bisnis STIKOM Bali",
+    desc: "Sarjana Komputer - Information System",
+    year: "September 2019 - present",
+    link: "https://stikom-bali.ac.id/",
+  },
+];
+
+export const workingExp = [
+  {
+    logo: helpLogo,
+    name: "HELP University",
+    desc: "Bachelor of Information Technology Honours Degree",
+    year: "September 2019 - present",
+    link: "https://university.help.edu.my/",
+  },
+  {
+    logo: stikomLogo,
+    name: "Institut Teknologi dan Bisnis STIKOM Bali",
+    desc: "Sarjana Komputer - Information System",
+    year: "September 2019 - present",
+    link: "https://stikom-bali.ac.id/",
+  },
+];
+
 export const techStack = [
   {
     name: "Angular",
