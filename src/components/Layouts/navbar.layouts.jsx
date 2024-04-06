@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="block lg:hidden">
-        <label className="btn btn-circle fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50">
+        <label className="btn btn-circle fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50 transition-colors ease-in duration-50">
           <input
             type="checkbox"
             className="hidden"
@@ -55,7 +55,7 @@ export const Navbar = () => {
             <li className="translation-all duration-300 dark:hover:bg-slate-700">
               <label
                 htmlFor="toggleDarkMode"
-                className="cursor-pointer swap swap-rotate"
+                className="cursor-pointer swap swap-rotate rounded-lg"
               >
                 <input
                   id="toggleDarkMode"
@@ -82,8 +82,8 @@ export const Navbar = () => {
                   spy={true}
                   smooth={true}
                   duration={100}
-                  activeClass="active dark:bg-slate-500 text-gray-50 font-semibold"
-                  className="font-normal dark:text-gray-50"
+                  activeClass="active dark:bg-slate-500 text-gray-50 font-semibold rounded-lg"
+                  className="font-normal dark:text-gray-50 hover:rounded-lg"
                 >
                   <FontAwesomeIcon className="w-4" icon={item.icon} />
                 </Link>

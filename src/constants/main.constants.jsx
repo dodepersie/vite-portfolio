@@ -98,7 +98,7 @@ export const projects = [
       "To find estimate of how many matches you need to get the Win Rate you want.",
     image: p2,
     tags: ["Bootstrap", "JS", "HTML", "CSS"],
-    visit: "http://penghitung-wr-mlbb.vercel.app/",
+    visit: "https://penghitung-wr-mlbb.vercel.app/",
   },
   {
     title: "MoofliXXI",
@@ -106,7 +106,7 @@ export const projects = [
       "See popular movies, see playing movies on cinema and search for movies!",
     image: p1,
     tags: ["Next UI", "React"],
-    visit: "http://mooflixxi.mahadisaputra.my.id/",
+    visit: "https://mooflixxi.mahadisaputra.my.id/",
   },
   {
     title: "Laravel Blog",
@@ -114,14 +114,14 @@ export const projects = [
       "This my blog where I'll share my experiences and also a ✨ little ✨ thing that I know.",
     image: p3,
     tags: ["Laravel", "Tailwind"],
-    visit: "http://blog.mahadisaputra.my.id/",
+    visit: "https://mahadisaputra.my.id/",
   },
   {
     title: "Real Count Pilpres Nasional 2024",
     description:
-      "Just a fun project to fetch Indonesia President Election data from kpu.go.id website",
+      "Just a fun project to fetch Indonesia president election quick count data from kpu.go.id website",
     image: p4,
     tags: ["NextJS", "Tailwind"],
-    visit: "http://pilpres2024.mahadisaputra.my.id/",
+    visit: "https://pilpres2024.mahadisaputra.my.id/",
   },
 ];

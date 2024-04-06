@@ -7,7 +7,7 @@ import photo1 from "./../../assets/1.png";
 export const Home = () => {
   return (
     <section id="home">
-      <div className="flex justify-between items-center min-h-screen text-black bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors duration-50">
+      <div className="flex justify-between items-center min-h-screen text-black bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
         <div className="flex flex-col lg:flex-row items-center mx-auto px-3 max-w-7xl gap-10">
           {/* Greeting */}
           <div className="w-full mx-auto px-3" data-aos="fade-up">
@@ -63,12 +63,15 @@ export const Home = () => {
           </div>
 
           {/* Hero image */}
-          <div className="hidden lg:block" data-aos="fade-down">
+          <picture
+            className="relative hidden overflow-hidden lg:block w-[600px] h-[400px] rounded-3xl shadow-xl"
+            data-aos="fade-down"
+          >
             <img
               src={photo1}
-              className="w-[450px] h-[350px] rounded-lg shadow-xl"
+              className="w-full h-full duration-150 ease-in hover:scale-110"
             />
-          </div>
+          </picture>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import { education, workingExp } from "../../constants/main.constants";
 export const Experience = () => {
   return (
     <section id="about-me">
-      <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
+      <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
         <div className="hero-content flex-col py-20 px-5">
           <h1 className="text-3xl lg:text-5xl">About Me</h1>
           <div className="flex flex-col items-center mb-10">
@@ -38,7 +38,7 @@ export const Experience = () => {
                       <Link
                         to={education.link}
                         target="_blank"
-                        className="text-blue-600 dark:text-blue-300 font-semibold"
+                        className="text-blue-600 dark:text-blue-300 font-semibold hover:underline"
                       >
                         {education.name}
                       </Link>
@@ -73,7 +73,7 @@ export const Experience = () => {
                       <Link
                         to={workingExp.link}
                         target="_blank"
-                        className="text-blue-600 dark:text-blue-300 font-semibold"
+                        className="text-blue-600 dark:text-blue-300 font-semibold hover:underline"
                       >
                         {workingExp.name}
                       </Link>

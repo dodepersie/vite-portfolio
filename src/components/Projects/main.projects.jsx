@@ -4,7 +4,7 @@ import ProjectSwiper from "./swiper.projects";
 export const Projects = () => {
   return (
     <section id="projects">
-      <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
+      <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
         <div className="hero-content px-5 py-10">
           <div
             className="lg:grid grid-cols-6 gap-10 justify-between text-base tracking-tight mt-auto"

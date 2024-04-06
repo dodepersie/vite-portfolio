@@ -6,7 +6,7 @@ import { TechStackAnimated } from "../../assets/lottie/techStackAnimation/techSt
 export const TechStack = () => {
   return (
     <section id="tech-stack">
-      <div className="hero min-h-screen bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors duration-50">
+      <div className="hero min-h-screen bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
         <div className="hero-content flex-row w-full gap-10 py-16 px-7">
           <div className="text-base w-full md:w-3/5 p-auto md:p-4 lg:p-auto">
             <h1 className="mb-5 text-3xl font-semibold" data-aos="fade-up">

@@ -33,14 +33,14 @@ const ProjectSwiper = () => {
         .sort((a, b) => a.title.localeCompare(b.title))
         .map(({ title, description, image, tags, visit }, i) => (
           <SplideSlide key={i}>
-            <div className="card bg-base-100 dark:bg-slate-700 border border-gray-200 dark:border-0 shadow hover:bg-gray-100 dark:hover:bg-slate-700/50">
-              <div className="w-full h-auto bg-white rounded-2xl mx-auto mb-3 overflow-hidden">
+            <div className="transition-colors ease-in duration-50 card bg-base-200 dark:bg-slate-700 border border-gray-200 dark:border-0 shadow hover:bg-base-200/40 dark:hover:bg-slate-700/50">
+              <picture className="w-full h-auto bg-white rounded-2xl mx-auto mb-3 overflow-hidden">
                 <img
                   src={image}
                   alt={title}
-                  className="object-cover rounded-sm w-full transform-none"
+                  className="object-cover rounded-sm w-full duration-150 ease-in hover:scale-110"
                 />
-              </div>
+              </picture>
               <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p className="text-[18px] lg:text-[20px] leading-loose">
@@ -52,7 +52,7 @@ const ProjectSwiper = () => {
                     role="button"
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-xs btn-primary dark:bg-slate-700 border-0"
+                    className="btn btn-xs btn-primary dark:bg-slate-900 border-0"
                   >
                     Visit
                   </a>
