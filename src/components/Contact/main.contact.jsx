@@ -62,70 +62,68 @@ export const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="container-fluid mx-auto">
-        <div className="hero min-h-screen bg-blue-700 dark:bg-slate-900 transition-colors duration-50">
-          <div className="hero-content flex-col md:flex-row w-full text-gray-50">
-            <div className="hidden md:block w-2/5" data-aos="zoom-in">
-              <ContactAnimate />
+      <div className="hero min-h-screen bg-blue-700 transition-colors duration-50">
+        <div className="hero-content flex-col md:flex-row w-full text-gray-50">
+          <div className="hidden md:block w-2/5" data-aos="zoom-in">
+            <ContactAnimate />
+          </div>
+
+          <div className="text-base text-left w-full" data-aos="fade-right">
+            <div className="flex flex-row justify-start items-center gap-3 text-4xl">
+              <div>
+                <FontAwesomeIcon icon={faContactCard} />
+              </div>
+              <div className="my-3">
+                <p className="font-semibold">Contact me</p>
+              </div>
             </div>
 
-            <div className="text-base text-left w-full" data-aos="fade-right">
-              <div className="flex flex-row justify-start items-center gap-3 text-4xl">
-                <div>
-                  <FontAwesomeIcon icon={faContactCard} />
-                </div>
-                <div className="my-3">
-                  <p className="font-semibold">Contact me</p>
-                </div>
+            {showAlert && (
+              <AlertMessage message={alertMessage} isSuccess={isSuccess} />
+            )}
+
+            <form ref={form} onSubmit={sendEmail} action="/">
+              <div className="form-control w-full">
+                <input
+                  type="text"
+                  name="user_name"
+                  className="input caret-pink-500 bg-gray-100"
+                  placeholder="Your name.."
+                  required
+                />
               </div>
 
-              {showAlert && (
-                <AlertMessage message={alertMessage} isSuccess={isSuccess} />
-              )}
+              <div className="form-control w-full">
+                <input
+                  type="email"
+                  name="user_email"
+                  className="input caret-pink-500 bg-gray-100 mt-5"
+                  placeholder="Your email.."
+                  required
+                />
+              </div>
 
-              <form ref={form} onSubmit={sendEmail} action="/">
-                <div className="form-control w-full">
-                  <input
-                    type="text"
-                    name="user_name"
-                    className="input caret-pink-500 bg-gray-100"
-                    placeholder="Your name.."
-                    required
-                  />
-                </div>
+              <div className="form-control w-full">
+                <textarea
+                  className="textarea caret-pink-500 bg-gray-100 resize-none mt-5"
+                  name="message"
+                  placeholder="Your message.."
+                  required
+                ></textarea>
+              </div>
 
-                <div className="form-control w-full">
-                  <input
-                    type="email"
-                    name="user_email"
-                    className="input caret-pink-500 bg-gray-100 mt-5"
-                    placeholder="Your email.."
-                    required
-                  />
-                </div>
+              <button
+                className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 text-gray-50"
+                type="submit"
+              >
+                Send
+              </button>
+            </form>
 
-                <div className="form-control w-full">
-                  <textarea
-                    className="textarea caret-pink-500 bg-gray-100 resize-none mt-5"
-                    name="message"
-                    placeholder="Your message.."
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50"
-                  type="submit"
-                >
-                  Send
-                </button>
-              </form>
-
-              <p className="text-xs text-left mb-5 mt-5 leading-loose">
-                *If you want to contact me on my social media, please see the
-                footer!
-              </p>
-            </div>
+            <p className="text-xs text-left mb-5 mt-5 leading-loose">
+              *If you want to contact me on my social media, please see the
+              footer!
+            </p>
           </div>
         </div>
       </div>

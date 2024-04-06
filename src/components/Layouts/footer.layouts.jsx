@@ -21,9 +21,11 @@ export const Footer = () => {
         minute: "2-digit",
         second: "2-digit",
       };
-      const formattedDateTime = currentDate.toLocaleString("en-US", options).replace("at", "-");
+      const formattedDateTime = currentDate
+        .toLocaleString("en-US", options)
+        .replace("at", "-");
       setCurrentDateTime(formattedDateTime);
-    }, 1000);    
+    }, 1000);
 
     return () => {
       clearInterval(intervalId);
@@ -42,7 +44,7 @@ export const Footer = () => {
       <footer className="footer footer-center p-5 text-gray-50">
         <div className="grid grid-flow-col gap-4">
           <a
-            href="https://www.facebook.com/DodePersie"
+            href="https://www.facebook.com/Dode404"
             target="_blank"
             rel="noreferrer"
             className="transition duration-300 ease-in-out transform hover:scale-125"
@@ -58,7 +60,7 @@ export const Footer = () => {
             <AiFillGithub size="2rem" />
           </a>
           <a
-            href="https://instagram.com/mahadisptr"
+            href="https://instagram.com/dode_p3rsie"
             target="_blank"
             rel="noreferrer"
             className="transition duration-300 ease-in-out transform hover:scale-125"
@@ -76,13 +78,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex justify-items-start lg:items-center">
-          <div className="avatar inline-block mr-1">
-            <div className="w-8 rounded-full ring ring-blue-500 ring-offset-base-100 ring-offset-2 cursor-pointer">
-              <img src={p2} alt="Mahadi Saputra's Avatar" />
-            </div>
-          </div>
-
-          <p className="text-xs md:text-sm">
+          <p className="text-xs lg:text-sm tracking-wide">
             By Mahadi Saputra @ {currentTime} ✨
           </p>
         </div>

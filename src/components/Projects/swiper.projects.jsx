@@ -9,7 +9,7 @@ const ProjectSwiper = () => {
         focus: "center",
         rewind: true,
         width: 900,
-        height: 550,
+        height: 570,
         wheel: true,
         gap: "1rem",
         breakpoints: {
@@ -17,6 +17,7 @@ const ProjectSwiper = () => {
             direction: "ttb",
             focus: "center",
             autoWidth: true,
+            height: 500,
             type: "loop",
           },
           1024: {
@@ -40,7 +41,7 @@ const ProjectSwiper = () => {
             </div>
             <div className="card-body">
               <h2 className="card-title">{title}</h2>
-              <p>{description}</p>
+              <p className="leading-loose">{description}</p>
               <div className="mt-5 inline-flex justify-between">
                 <a
                   href={visit}
