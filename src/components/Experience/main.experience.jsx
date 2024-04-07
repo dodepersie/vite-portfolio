@@ -6,26 +6,30 @@ export const Experience = () => {
     <section id="about-me">
       <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
         <div className="hero-content flex-col py-16 px-5">
-          <h1 className="text-3xl lg:text-5xl">About Me</h1>
-          <div className="flex flex-col items-center mb-10">
-            <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400 mb-10"></div>
+          <div className="flex flex-col items-center gap-5" data-aos="zoom-in">
+            <h1 className="text-4xl lg:text-5xl font-semibold">About Me</h1>
+            <div className="flex flex-col items-center mb-10">
+              <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400 mb-10"></div>
 
-            <p className="text-[18px] lg:text-[20px] text-center leading-loose">
-              I'm a curious person and currently working on my Final Project to
-              complete my university
-            </p>
+              <p className="text-xl lg:text-2xl text-center leading-loose">
+                I'm a curious person and currently working on my Final Project
+                to complete my university
+              </p>
+            </div>
           </div>
 
           <div className="md:grid grid-cols-2 justify-between gap-20 space-y-10 lg:space-y-0">
-            <div className="col-span-1 space-y-10">
+            <div className="col-span-1 space-y-10" data-aos="fade-up">
               <div className="flex flex-col space-y-4 mb-10">
-                <h1 className="text-lg lg:text-2xl font-semibold">Education</h1>
+                <h1 className="text-2xl lg:text-3xl font-semibold">
+                  Education
+                </h1>
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
               {education.map((education, index) => {
                 return (
-                  <div className="flex items-center" key={index}>
+                  <div className="flex items-center text-lg" key={index}>
                     <div className="w-20 h-20 rounded-lg bg-white overflow-hidden">
                       <img
                         src={education.logo}
@@ -50,20 +54,20 @@ export const Experience = () => {
               })}
             </div>
 
-            <div className="col-span-1 space-y-10">
+            <div className="col-span-1 space-y-10" data-aos="fade-down">
               <div className="flex flex-col space-y-4 mb-10">
-                <h1 className="text-lg lg:text-2xl font-semibold">
+                <h1 className="text-2xl lg:text-3xl font-semibold">
                   Working Experiences
                 </h1>
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
-              <p>Still looking for working experience..</p>
+              <p className="text-lg">Still looking for working experience..</p>
 
               {/*
               {workingExp.map((workingExp, index) => {
                 return (
-                  <div className="flex items-center" key={index}>
+                  <div className="flex items-center text-lg" key={index}>
                     <div className="w-20 h-20 rounded-lg bg-white overflow-hidden">
                       <img
                         src={workingExp.logo}

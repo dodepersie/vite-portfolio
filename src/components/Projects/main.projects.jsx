@@ -9,14 +9,14 @@ export const Projects = () => {
             className="lg:grid grid-cols-6 gap-10 justify-between text-base tracking-tight mt-auto"
             data-aos="fade-up"
           >
-            <div className="col-span-3 flex flex-col justify-center items-center pb-4 gap-4">
-              <h3 className="my-2 text-3xl lg:text-5xl text-black dark:text-white">
+            <div className="col-span-3 flex flex-col justify-center items-center lg:items-start pb-4 gap-4">
+              <h3 className="font-semibold my-2 text-3xl lg:text-7xl text-black dark:text-white">
                 My Recent
               </h3>
-              <h1 className="font-semibold text-5xl lg:text-7xl text-blue-700 dark:text-blue-400">
+              <h1 className="font-semibold text-5xl lg:text-9xl text-blue-700 dark:text-blue-400">
                 Projects
               </h1>
-              <p className="text-center text-[18px] lg:text-[20px] my-5">
+              <p className="text-xl lg:text-2xl my-5">
                 Some projects that I've made~
               </p>
             </div>

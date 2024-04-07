@@ -11,6 +11,7 @@ const ProjectSwiper = () => {
         width: "100%",
         height: 580,
         wheel: true,
+        type: "loop",
         breakpoints: {
           640: {
             perPage: 1,
