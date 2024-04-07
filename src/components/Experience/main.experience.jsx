@@ -5,7 +5,7 @@ export const Experience = () => {
   return (
     <section id="about-me">
       <div className="hero min-h-screen dark:bg-slate-900 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
-        <div className="hero-content flex-col py-20 px-5">
+        <div className="hero-content flex-col py-16 px-5">
           <h1 className="text-3xl lg:text-5xl">About Me</h1>
           <div className="flex flex-col items-center mb-10">
             <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400 mb-10"></div>
@@ -16,7 +16,7 @@ export const Experience = () => {
             </p>
           </div>
 
-          <div className="lg:grid grid-cols-2 justify-between gap-20 space-y-10 lg:space-y-0">
+          <div className="md:grid grid-cols-2 justify-between gap-20 space-y-10 lg:space-y-0">
             <div className="col-span-1 space-y-10">
               <div className="flex flex-col space-y-4 mb-10">
                 <h1 className="text-lg lg:text-2xl font-semibold">Education</h1>
@@ -58,7 +58,7 @@ export const Experience = () => {
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
-              <p>Still looking for a work experience..</p>
+              <p>Still looking for working experience..</p>
 
               {/*
               {workingExp.map((workingExp, index) => {

@@ -10,26 +10,40 @@ const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
 
 function AlertMessage(props) {
   const { message, isSuccess } = props;
-  const alertClass = isSuccess
-    ? "bg-blue-500 text-gray-50 dark:bg-slate-700 rounded-lg"
-    : "bg-red-500 text-gray-50";
+  const alertClass = isSuccess ? "bg-blue-500 dark:bg-slate-700" : "bg-red-500";
 
   return (
-    <div className={`alert ${alertClass} mb-5`}>
+    <div className={`alert ${alertClass} text-base-100 mb-5`}>
       <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="stroke-current flex-shrink-0 h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
+        {isSuccess ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current flex-shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current flex-shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        )}
         <span>{message}</span>
       </div>
     </div>
@@ -51,11 +65,17 @@ export const Contact = () => {
     const userEmail = form.current.user_email.value.trim();
     const message = form.current.message.value.trim();
 
-    if (!userName || !userEmail || !message) {
+    if (
+      !userName ||
+      !userEmail ||
+      !message ||
+      (userName == "") | (userEmail == "") ||
+      message == ""
+    ) {
       setAlertMessage("Please fill in all fields.");
       setIsSuccess(false);
       setShowAlert(true);
-      return; // Stop the function if validation fails
+      return;
     }
 
     // Simple email format validation
@@ -92,7 +112,7 @@ export const Contact = () => {
   return (
     <section id="contact">
       <div className="hero min-h-screen bg-blue-700 transition-colors duration-50">
-        <div className="hero-content flex-col md:flex-row w-full text-gray-50">
+        <div className="hero-content flex-col md:flex-row w-full text-gray-50 pt-0 pb-16 px-7">
           <div className="hidden md:block w-2/5" data-aos="zoom-in">
             <ContactAnimate />
           </div>

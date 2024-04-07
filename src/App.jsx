@@ -1,7 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "@splidejs/splide/css";
-import "@splidejs/splide/css/skyblue";
 import "@splidejs/splide/css/core";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
