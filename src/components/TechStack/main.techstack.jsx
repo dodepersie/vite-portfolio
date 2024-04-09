@@ -6,7 +6,7 @@ import { TechStackAnimated } from "../../assets/lottie/techStackAnimation/techSt
 export const TechStack = () => {
   return (
     <section id="tech-stack">
-      <div className="hero min-h-screen bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
+      <div className="hero min-h-screen bg-gradient-to-br from-blue-500 via-blue-400 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
         <div className="hero-content flex-row w-full gap-10 py-16 px-7">
           <div className="text-base w-full md:w-3/5 p-auto md:p-4 lg:p-auto">
             <h1
@@ -17,7 +17,7 @@ export const TechStack = () => {
             </h1>
 
             <div className="flex flex-wrap items-center">
-              <div className="grid grid-cols-6 lg:grid-cols-12 justify-center items-center gap-10">
+              <div className="grid grid-cols-6 lg:grid-cols-12 justify-center items-center gap-10 overflow-auto h-80 p-4">
                 {techStack
                   .sort((a, b) => a.name.localeCompare(b.name))
                   .map((item, index) => (
@@ -27,7 +27,9 @@ export const TechStack = () => {
                       key={index}
                     >
                       <img src={item.icon} alt={item.name} />
-                      <h2 className="text-md text-center mt-4">{item.name}</h2>
+                      <h2 className="text-md text-center mt-4 font-medium">
+                        {item.name}
+                      </h2>
                     </div>
                   ))}
               </div>

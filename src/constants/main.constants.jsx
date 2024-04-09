@@ -89,13 +89,25 @@ export const techStack = [
     name: "Tailwind CSS",
     icon: "https://img.icons8.com/fluency/96/tailwind_css.png",
   },
+  {
+    name: "React",
+    icon: "https://img.icons8.com/color/96/000000/react-native.png",
+  },
+  {
+    name: "PHP",
+    icon: "https://img.icons8.com/ios-filled/96/php-logo.png",
+  },
+  {
+    name: "Vuejs",
+    icon: "https://img.icons8.com/?size=256&id=BUnExfsRs3CW&format=png",
+  },
 ];
 
 export const projects = [
   {
     title: "MLBB WR Counter",
     description:
-      "To find estimate of how many matches you need to get the Win Rate you want.",
+      "To estimate how many matches you need to get Hero Win Rate you want.",
     image: p2,
     tags: ["Bootstrap", "JS", "HTML", "CSS"],
     visit: "https://penghitung-wr-mlbb.vercel.app/",
@@ -111,7 +123,7 @@ export const projects = [
   {
     title: "Laravel Blog",
     description:
-      "This my blog where I'll share my experiences and also a ✨ little ✨ thing that I know.",
+      "My personal blog where I'll share my experiences and also a ✨ little ✨ thing that I know.",
     image: p3,
     tags: ["Laravel", "Tailwind"],
     visit: "https://mahadisaputra.my.id/",

@@ -10,7 +10,7 @@ import photo1 from "./../../assets/1.png";
 export const Home = () => {
   return (
     <section id="home">
-      <div className="hero min-h-screen p-auto md:p-4 bg-gradient-to-br from-blue-300 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
+      <div className="hero min-h-screen p-auto md:p-4 bg-gradient-to-br from-blue-500 via-blue-400 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
         <div className="hero-content lg:flex-row py-16 px-5 gap-10">
           {/* Greeting */}
           <div
@@ -20,12 +20,12 @@ export const Home = () => {
             <h3 className="text-2xl xl:text-3xl font-bold leading-snug">
               Hello there, i'm
             </h3>
-            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-blue-700 dark:text-blue-400">
+            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-blue-800 dark:text-slate-400">
               Mahadi Saputra
             </h1>
             <h3 className="text-2xl xl:text-3xl font-normal">
               <span>A </span>
-              <span className="text-blue-500 dark:text-blue-400 font-semibold">
+              <span className="text-blue-800 dark:text-slate-400 font-semibold">
                 <Typewriter
                   words={[
                     "Student",
