@@ -20,12 +20,12 @@ export const Home = () => {
             <h3 className="text-2xl xl:text-3xl font-bold leading-snug">
               Hello there, i'm
             </h3>
-            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-blue-800 dark:text-slate-400">
+            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-indigo-700 dark:text-slate-400">
               Mahadi Saputra
             </h1>
             <h3 className="text-2xl xl:text-3xl font-normal">
               <span>A </span>
-              <span className="text-blue-800 dark:text-slate-400 font-semibold">
+              <span className="text-indigo-700 dark:text-slate-400 font-semibold">
                 <Typewriter
                   words={[
                     "Student",

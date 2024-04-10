@@ -37,7 +37,7 @@ const ProjectSwiper = () => {
                 <img
                   src={image}
                   alt={title}
-                  className="object-cover rounded-sm w-full duration-150 ease-in hover:scale-110"
+                  className="object-cover rounded-sm w-full transition-all hover:scale-110"
                 />
               </picture>
               <div className="card-body">
@@ -57,7 +57,7 @@ const ProjectSwiper = () => {
                   </a>
                   <div className="card-actions justify-end">
                     {tags.map((tag, i) => (
-                      <div className="badge badge-outline" key={i}>
+                      <div className="badge badge-md badge-outline" key={i}>
                         {tag}
                       </div>
                     ))}

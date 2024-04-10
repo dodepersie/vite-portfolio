@@ -31,50 +31,45 @@ export const Navbar = () => {
   return (
     <>
       <div className="block lg:hidden">
-        <label className="btn btn-circle fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50 transition-colors ease-in duration-50">
-          <input
-            type="checkbox"
-            className="hidden"
-            onClick={handleCollapsible}
-          />
+        <label className="btn btn-circle swap swap-rotate fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50 transition-colors ease-in duration-50">
+          <input type="checkbox" onClick={handleCollapsible} />
           <FontAwesomeIcon
             icon={isCollapsed ? faNavicon : faTimes}
-            className="text-lg"
+            className={`${isCollapsed ? "swap-off" : "swap-on"} text-lg`}
           />
         </label>
       </div>
 
       <nav
-        className={`fixed top-1/2 left-2 -translate-y-1/2 rounded-lg shadow-md mx-auto p-1 z-[1002] bg-white dark:bg-slate-600 ${
+        className={`fixed top-1/2 left-2 -translate-y-1/2 rounded-lg shadow-md mx-auto p-1 z-[1001] bg-white dark:bg-slate-600 ${
           isCollapsed ? "hidden lg:block" : "block"
         }`}
       >
         {/* Menu Items */}
         <div className="flex items-center">
           <ul className="menu space-y-1">
-            <li className="translation-all duration-300 dark:hover:bg-slate-700">
-              <label
-                htmlFor="toggleDarkMode"
-                className="cursor-pointer swap swap-rotate rounded-lg"
-              >
+            <li className="translation-all duration-300 dark:hover:bg-slate-700 hover:rounded-lg">
+              <label for="toggleDarkMode" className="swap swap-rotate">
                 <input
                   id="toggleDarkMode"
                   type="checkbox"
                   checked={isDarkMode}
                   onChange={toggleDarkMode}
-                  className="hidden"
                 />
                 {isDarkMode ? (
-                  <FontAwesomeIcon className="text-gray-50 w-4" icon={faMoon} />
+                  <FontAwesomeIcon
+                    className="swap-on dark:text-gray-50"
+                    icon={faMoon}
+                  />
                 ) : (
-                  <FontAwesomeIcon className="w-4" icon={faSun} />
+                  <FontAwesomeIcon className="swap-off" icon={faSun} />
                 )}
               </label>
             </li>
             {menuLink.map((item, index) => (
               <li
                 key={index}
-                className="translation-all duration-300 dark:hover:bg-slate-700"
+                className="translation-all duration-300 dark:hover:bg-slate-700 hover:rounded-lg"
               >
                 <Link
                   to={item.link}

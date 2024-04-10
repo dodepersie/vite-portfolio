@@ -162,7 +162,7 @@ export const Contact = () => {
               </div>
 
               <button
-                className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 text-gray-50 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-800 dark:hover:bg-slate-800/50 text-gray-50 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50"
                 type="submit"
                 disabled={isSending}
               >

@@ -86,7 +86,7 @@ export const techStack = [
     icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/90/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: "https://img.icons8.com/fluency/96/tailwind_css.png",
   },
   {
