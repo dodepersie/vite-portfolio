@@ -6,7 +6,7 @@ export default {
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ["Jost", ...defaultTheme.fontFamily.sans],
+      sans: ["Afacad Flux", ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [require("daisyui")],

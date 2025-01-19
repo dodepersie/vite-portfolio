@@ -27,6 +27,23 @@
   ::-webkit-scrollbar-thumb:active {
     background-color: rgb(30, 64, 175);
   }
+
+  /* Dark mode */
+  html.dark ::-webkit-scrollbar-track {
+    background-color: #333;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    background-color: #666;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb:active {
+    background-color: #bbb;
+  }
 }
 
 @layer components {

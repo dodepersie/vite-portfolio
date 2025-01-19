@@ -10,17 +10,17 @@ import photo1 from "./../../assets/1.png";
 export const Home = () => {
   return (
     <section id="home">
-      <div className="hero min-h-screen p-auto md:p-4 bg-gradient-to-br from-blue-500 via-blue-400 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
+      <div className="hero min-h-screen p-auto md:p-4 bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
         <div className="hero-content lg:flex-row py-16 px-5 gap-10">
           {/* Greeting */}
           <div
-            className="flex flex-col justify-start items-start gap-5"
+            className="flex flex-col justify-start items-start gap-5 md:w-1/2"
             data-aos="fade-up"
           >
             <h3 className="text-2xl xl:text-3xl font-bold leading-snug">
               Hello there, i'm
             </h3>
-            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-indigo-700 dark:text-slate-400">
+            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-white dark:text-slate-400">
               Mahadi Saputra
             </h1>
             <h3 className="text-2xl xl:text-3xl font-normal">
@@ -67,18 +67,18 @@ export const Home = () => {
 
               <a
                 href="https://linkedin.com/in/mahadisaputra"
-                className="btn border-slate-900 bg-base-100 hover:bg-base-100/80 text-black"
+                className="btn bg-white hover:bg-white text-black border-0"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faFileDownload} className="me-4" />
-                Download CV
+                My CV
               </a>
             </div>
           </div>
 
           {/* Hero image */}
           <picture
-            className="relative hidden overflow-hidden lg:block w-[600px] h-[400px] rounded-3xl shadow-xl"
+            className="relative hidden overflow-hidden md:block md:w-1/2 lg:w-1/3 rounded-3xl shadow-xl"
             data-aos="fade-down"
           >
             <img

@@ -2,6 +2,7 @@ import p1 from "./../assets/projects/1.png"; // MoofliXXI
 import p2 from "./../assets/projects/2.png"; // MLBB WR Counter
 import p3 from "./../assets/projects/3.png"; // Laravel BLog
 import p4 from "./../assets/projects/4.png"; // Pilpres 2024
+import p5 from "./../assets/projects/5.png"; // TicTic
 
 import helpLogo from "./../assets/edu/help.png";
 import stikomLogo from "./../assets/edu/stikom.png";
@@ -11,14 +12,14 @@ export const education = [
     logo: helpLogo,
     name: "HELP University",
     desc: "Bachelor of Information Technology Honours Degree",
-    year: "September 2019 - present",
+    year: "September 2019 - April 2025",
     link: "https://university.help.edu.my/",
   },
   {
     logo: stikomLogo,
     name: "Institut Teknologi dan Bisnis STIKOM Bali",
     desc: "Sarjana Komputer - Information System",
-    year: "September 2019 - present",
+    year: "September 2019 - June 2025",
     link: "https://stikom-bali.ac.id/",
   },
 ];
@@ -104,6 +105,14 @@ export const techStack = [
 ];
 
 export const projects = [
+  {
+    title: "TicTic",
+    description:
+      "For Final Year project. This is a website to manage ticketing for events.",
+    image: p5,
+    tags: ["Laravel", "Tailwind"],
+    visit: "/",
+  },
   {
     title: "MLBB WR Counter",
     description:

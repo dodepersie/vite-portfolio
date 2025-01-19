@@ -61,7 +61,7 @@ export const Footer = () => {
             <AiFillGithub size="2rem" />
           </Link>
           <Link
-            to="https://instagram.com/dode_p3rsie"
+            to="https://instagram.com/t4kezy"
             target="_blank"
             rel="noreferrer"
             className="transition duration-300 ease-in-out transform hover:scale-125"

@@ -11,14 +11,17 @@ export const Experience = () => {
             <div className="flex flex-col items-center mb-10">
               <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400 mb-10"></div>
 
-              <p className="text-xl lg:text-2xl text-center leading-loose">
-                I'm a curious person and currently working on my Final Project
-                to complete my university
-              </p>
+              <div className="lg:w-[700px]">
+                <p className="text-xl lg:text-2xl text-center leading-loose">
+                  I'm a curious person. I can learn new things and I can be a
+                  good listener. And I'm a person who is responsible for
+                  anything that already give to me.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="md:grid grid-cols-2 justify-between gap-20 space-y-10 lg:space-y-0">
+          <div className="md:grid grid-cols-2 justify-between gap-20 space-y-10 md:space-y-0">
             <div className="col-span-1 space-y-10" data-aos="fade-up">
               <div className="flex flex-col space-y-4 mb-10">
                 <h1 className="text-2xl lg:text-3xl font-semibold">
@@ -62,7 +65,9 @@ export const Experience = () => {
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
-              <p className="text-lg">Still looking for working experience..</p>
+              <p className="text-xl">
+                I'm open for my first work experience 😊
+              </p>
 
               {/*
               {workingExp.map((workingExp, index) => {

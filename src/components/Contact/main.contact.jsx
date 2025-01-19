@@ -111,7 +111,7 @@ export const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="hero min-h-screen bg-gradient-to-br from-blue-500 via-blue-400 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors duration-50">
+      <div className="hero min-h-screen bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors duration-50">
         <div className="hero-content flex-col md:flex-row w-full text-gray-50 pt-0 pb-16 px-7">
           <div className="hidden md:block w-2/5" data-aos="zoom-in">
             <ContactAnimate />

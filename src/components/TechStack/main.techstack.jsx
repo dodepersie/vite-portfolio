@@ -6,22 +6,22 @@ import { TechStackAnimated } from "../../assets/lottie/techStackAnimation/techSt
 export const TechStack = () => {
   return (
     <section id="tech-stack">
-      <div className="hero min-h-screen bg-gradient-to-br from-blue-500 via-blue-400 to-blue-200 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
-        <div className="hero-content flex-col gap-5 py-16 px-7">
+      <div className="hero min-h-screen bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 p-auto md:p-4 transition-colors ease-in duration-50">
+        <div className="hero-content flex-col gap-5 py-16">
           <div
             className="flex flex-col justify-center items-center text-gray-50 mb-10"
             data-aos="fade-up"
           >
             <h1 className="mb-7 text-4xl lg:text-5xl font-semibold">
-              <FontAwesomeIcon icon={faCode} className="me-2" /> tech_stack
+              <FontAwesomeIcon icon={faCode} className="me-2" /> Tech Stack
             </h1>
 
             <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
           </div>
-          <div className="md:grid grid-cols-2 items-center gap-10">
-            <div className="col-span-1 text-base-100">
-              <div className="flex flex-wrap items-center">
-                <div className="grid grid-cols-6 lg:grid-cols-12 justify-center items-center gap-4">
+          <div className="md:flex md:flex-col-reverse lg:flex-row items-center gap-10">
+            <div className="md:w-full text-base-100">
+              <div className="flex flex-wrap justify-center items-center">
+                <div className="grid grid-cols-6 md:grid-cols-12 justify-center items-center gap-4">
                   {techStack
                     .sort((a, b) => a.name.localeCompare(b.name))
                     .map((item, index) => (
@@ -45,7 +45,8 @@ export const TechStack = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-1 hidden md:block" data-aos="zoom-in">
+
+            <div className="hidden md:block md:w-2/3" data-aos="zoom-in">
               <TechStackAnimated />
             </div>
           </div>

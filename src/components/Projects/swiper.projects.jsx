@@ -12,17 +12,16 @@ const ProjectSwiper = () => {
         height: 580,
         wheel: true,
         type: "loop",
+        gap: "2rem",
         breakpoints: {
           640: {
             perPage: 1,
             width: 300,
-            height: "auto",
+            height: 485,
           },
-          1024: {
-            perPage: 2,
-            gap: "1rem",
-            focus: "center",
-            height: 515,
+          1022: {
+            width: 500,
+            height: 495,
           },
         },
       }}
