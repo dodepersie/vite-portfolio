@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { education, workingExp } from "../../constants/main.constants";
+import { GlobalTooltip } from "../Utilities/tooltip.utilities";
 
 export const Experience = () => {
   return (
@@ -34,11 +35,13 @@ export const Experience = () => {
                 return (
                   <div className="flex items-center text-lg" key={index}>
                     <div className="w-20 h-20 rounded-lg bg-transparent overflow-hidden">
-                      <img
-                        src={education.logo}
-                        alt={education.name}
-                        className="object-cover rounded-lg shadow-sm w-full h-full"
-                      />
+                      <GlobalTooltip tooltipTitle={education.name}>
+                        <img
+                          src={education.logo}
+                          alt={education.name}
+                          className="object-cover rounded-lg shadow-sm w-full h-full"
+                        />
+                      </GlobalTooltip>
                     </div>
 
                     <div className="flex flex-col items-start justify-start ms-4 w-3/4">
