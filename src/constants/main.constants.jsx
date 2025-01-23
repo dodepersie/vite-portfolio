@@ -76,7 +76,7 @@ export const techStack = [
   },
   {
     name: "Java",
-    icon: "https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png",
+    icon: "https://img.icons8.com/?size=100&id=5OD485koNIrb&format=png",
   },
   {
     name: "Node",
@@ -91,7 +91,7 @@ export const techStack = [
     icon: "https://img.icons8.com/fluency/96/tailwind_css.png",
   },
   {
-    name: "React",
+    name: "React.js",
     icon: "https://img.icons8.com/color/96/000000/react-native.png",
   },
   {
@@ -99,8 +99,12 @@ export const techStack = [
     icon: "https://img.icons8.com/ios-filled/96/php-logo.png",
   },
   {
-    name: "Vuejs",
+    name: "Vue.js",
     icon: "https://img.icons8.com/?size=256&id=BUnExfsRs3CW&format=png",
+  },
+  {
+    name: "Express.js",
+    icon: "https://img.icons8.com/?size=256&id=kg46nzoJrmTR&format=png",
   },
 ];
 

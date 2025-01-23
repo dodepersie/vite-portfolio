@@ -33,7 +33,7 @@ export const Experience = () => {
               {education.map((education, index) => {
                 return (
                   <div className="flex items-center text-lg" key={index}>
-                    <div className="w-20 h-20 rounded-lg bg-white overflow-hidden">
+                    <div className="w-20 h-20 rounded-lg bg-transparent overflow-hidden">
                       <img
                         src={education.logo}
                         alt={education.name}

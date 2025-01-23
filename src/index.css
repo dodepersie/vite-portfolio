@@ -62,7 +62,11 @@
   }
 
   footer {
-    background-color: #3586ff;
+    background-color: #3174f1;
+  }
+
+  html.dark footer {
+    background-color: #607086;
   }
 
   .wave__wrapper {
@@ -77,6 +81,10 @@
     height: 100px;
     background-image: url("/img/wave.png");
     background-size: 1000px 100px;
+  }
+
+  html.dark .wave {
+    background-image: url("/img/wave-dark.png");
   }
 
   .wave1 {

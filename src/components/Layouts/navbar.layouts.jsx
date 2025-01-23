@@ -29,7 +29,7 @@ export const Navbar = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="block lg:hidden">
         <label className="btn btn-circle swap swap-rotate fixed bottom-4 left-2 shadow-xl z-[1003] bg-white text-black border-0 hover:bg-white dark:bg-slate-500 dark:text-gray-50 transition-colors ease-in duration-50">
           <input type="checkbox" onClick={handleCollapsible} />
@@ -49,7 +49,7 @@ export const Navbar = () => {
         <div className="flex items-center">
           <ul className="menu space-y-1">
             <li className="translation-all duration-300 dark:hover:bg-slate-700 hover:rounded-lg">
-              <label for="toggleDarkMode" className="swap swap-rotate">
+              <label htmlFor="toggleDarkMode" className="swap swap-rotate">
                 <input
                   id="toggleDarkMode"
                   type="checkbox"
@@ -87,6 +87,6 @@ export const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </>
+    </div>
   );
 };

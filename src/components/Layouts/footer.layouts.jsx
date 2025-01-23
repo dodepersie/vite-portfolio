@@ -87,7 +87,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex justify-items-start lg:items-center">
-          <p className="text-xs lg:text-sm tracking-wide">
+          <p className="text-xs lg:text-[16px] tracking-wide">
             By Mahadi Saputra @ {currentTime} ✨
           </p>
         </div>
