@@ -11,21 +11,21 @@ export const Home = () => {
   return (
     <section id="home">
       <div className="hero min-h-screen p-auto md:p-4 bg-gradient-to-br from-blue-500 via-blue-400 to-blue-500 dark:from-slate-900 dark:via-slate-700 dark:to-slate-800 dark:text-gray-50 transition-colors ease-in duration-50">
-        <div className="hero-content lg:flex-row py-16 px-5 gap-10">
+        <div className="hero-content lg:flex-row py-16 px-5 gap-10 lg:gap-40">
           {/* Greeting */}
           <div
             className="flex flex-col justify-start items-start gap-5 md:w-1/2"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl xl:text-3xl font-bold leading-snug">
+            <h3 className="text-2xl lg:text-3xl font-bold leading-snug">
               Hello there, i'm
             </h3>
-            <h1 className="text-4xl xl:text-7xl font-bold leading-snug text-white dark:text-slate-400">
+            <h1 className="text-5xl lg:text-7xl font-bold leading-snug text-white dark:text-slate-400">
               Mahadi Saputra
             </h1>
-            <h3 className="text-2xl xl:text-3xl font-normal">
+            <h3 className="text-3xl">
               <span>A </span>
-              <span className="text-indigo-700 dark:text-slate-400 font-semibold">
+              <span className="text-blue-800 dark:text-slate-400 font-semibold">
                 <Typewriter
                   words={[
                     "Student",
@@ -43,7 +43,7 @@ export const Home = () => {
                 />
               </span>
             </h3>
-            <p className="prose text-[16px] md:text-[20px] leading-loose">
+            <p className="prose text-[20px] md:text-[22px] leading-loose">
               Experienced full stack web developer who loves to created a UI
               friendly website and like to learn more about web development
               technologies!
@@ -56,7 +56,7 @@ export const Home = () => {
                 spy={true}
                 smooth={true}
                 duration={100}
-                className="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0"
+                className="btn bg-blue-700 hover:bg-blue-800 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0"
               >
                 <FontAwesomeIcon
                   icon={faArrowCircleDown}
