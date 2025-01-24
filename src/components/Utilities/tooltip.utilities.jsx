@@ -15,3 +15,17 @@ export const GlobalTooltip = ({ tooltipTitle, children }) => {
     </Tooltip>
   );
 };
+
+export const NavTooltip = ({ tooltipTitle, children }) => {
+  return (
+    <Tooltip
+      title={tooltipTitle}
+      distance={12}
+      animation="perspective"
+      position="right"
+      trigger="mouseenter"
+    >
+      {children}
+    </Tooltip>
+  );
+};

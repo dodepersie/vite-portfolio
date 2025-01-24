@@ -1,9 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowCircleDown,
-  faFileDownload,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaRegFileLines, FaCircleChevronDown } from "react-icons/fa6";
 import { Link } from "react-scroll";
 import photo1 from "./../../assets/1.png";
 
@@ -49,7 +45,7 @@ export const Home = () => {
               technologies!
             </p>
 
-            <div className="flex justify-center items-center gap-1.5">
+            <div className="flex justify-center items-center gap-3">
               <Link
                 to="projects"
                 isDynamic={true}
@@ -58,10 +54,7 @@ export const Home = () => {
                 duration={100}
                 className="btn bg-blue-700 hover:bg-blue-800 active:bg-blue-900 dark:bg-slate-500 dark:hover:bg-slate-600 dark:active:bg-slate-700 text-gray-50 border-0"
               >
-                <FontAwesomeIcon
-                  icon={faArrowCircleDown}
-                  className="me-4 animate-bounce"
-                />
+                <FaCircleChevronDown className="me-4 animate-bounce" />
                 My projects
               </Link>
 
@@ -70,7 +63,7 @@ export const Home = () => {
                 className="btn bg-white hover:bg-white text-black border-0"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFileDownload} className="me-4" />
+                <FaRegFileLines className="me-2" />
                 My CV
               </a>
             </div>

@@ -7,8 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Main } from "./components/main.main";
 import { NotFound } from "./components/Home/notfound.home";
 import ScrollToTop from "react-scroll-to-top";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FaChevronUp } from "react-icons/fa";
 
 function App() {
   AOS.init({
@@ -18,11 +17,11 @@ function App() {
 
   return (
     <Router>
-      <div className="select-none text-xl" data-theme="light">
+      <div className="select-none text-xl" data-theme="fantasy">
         <ScrollToTop
           style={{ zIndex: "1001", right: "15px", bottom: "20px" }}
-          className="transition-colors ease-in duration-50 dark:bg-slate-600 dark:text-gray-50"
-          component={<FontAwesomeIcon icon={faChevronUp} />}
+          className="flex justify-center items-center transition-colors ease-in duration-50 dark:bg-slate-600 dark:text-gray-50"
+          component={<FaChevronUp />}
         />
         <Routes>
           <Route exact path="/" element={<Main />} />

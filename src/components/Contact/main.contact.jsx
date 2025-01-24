@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faContactCard } from "@fortawesome/free-solid-svg-icons";
+import { FaRegMessage } from "react-icons/fa6";
 import { ContactAnimate } from "./../../assets/lottie/contactAnimation/contactAnimation";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
@@ -118,10 +117,8 @@ export const Contact = () => {
           </div>
 
           <div className="text-base text-left w-full" data-aos="fade-right">
-            <div className="flex flex-row justify-start items-center gap-3 text-4xl mb-5">
-              <div>
-                <FontAwesomeIcon icon={faContactCard} className="me-2" />
-              </div>
+            <div className="flex flex-row items-center gap-3 text-4xl mb-5">
+              <FaRegMessage />
               <div className="my-3">
                 <p className="font-semibold">Contact me</p>
               </div>
