@@ -20,9 +20,8 @@ export const NavTooltip = ({ tooltipTitle, children }) => {
   return (
     <Tooltip
       title={tooltipTitle}
-      distance={12}
+      distance={20}
       animation="perspective"
-      position="right"
       trigger="mouseenter"
     >
       {children}

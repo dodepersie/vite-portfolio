@@ -42,7 +42,7 @@ export const Footer = () => {
         <div className="wave wave4"></div>
       </div>
 
-      <footer className="footer footer-center p-5 text-gray-50">
+      <footer className="footer footer-center p-5 text-gray-50 pb-24">
         <div className="grid grid-flow-col gap-4">
           <Link
             to="https://www.facebook.com/Dode404"

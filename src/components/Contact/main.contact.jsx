@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaRegMessage } from "react-icons/fa6";
+import { FaRegMessage, FaPaperPlane } from "react-icons/fa6";
 import { ContactAnimate } from "./../../assets/lottie/contactAnimation/contactAnimation";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
@@ -163,6 +163,7 @@ export const Contact = () => {
                 type="submit"
                 disabled={isSending}
               >
+                <FaPaperPlane class="mr-2" />
                 {isSending ? "Sending..." : "Send"}
               </button>
             </form>
