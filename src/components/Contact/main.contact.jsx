@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaRegMessage, FaPaperPlane } from "react-icons/fa6";
+import { useRef, useState } from "react";
+import { FaPaperPlane, FaRegMessage } from "react-icons/fa6";
 import { ContactAnimate } from "./../../assets/lottie/contactAnimation/contactAnimation";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;

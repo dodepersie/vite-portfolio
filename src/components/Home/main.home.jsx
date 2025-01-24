@@ -1,6 +1,6 @@
-import { Typewriter } from "react-simple-typewriter";
-import { FaRegFileLines, FaCircleChevronDown } from "react-icons/fa6";
+import { FaCircleChevronDown, FaRegFileLines } from "react-icons/fa6";
 import { Link } from "react-scroll";
+import { Typewriter } from "react-simple-typewriter";
 import photo1 from "./../../assets/1.png";
 
 export const Home = () => {

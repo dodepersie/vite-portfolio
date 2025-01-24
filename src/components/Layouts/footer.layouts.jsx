@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
+  AiFillFacebook,
   AiFillGithub,
   AiFillInstagram,
-  AiFillFacebook,
-  AiOutlineWhatsApp,
   AiFillLinkedin,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 

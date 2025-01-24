@@ -1,10 +1,10 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "@splidejs/splide/css";
 import "@splidejs/splide/css/core";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Main } from "./components/main.main";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { NotFound } from "./components/Home/notfound.home";
+import { Main } from "./components/main.main";
 
 function App() {
   AOS.init({

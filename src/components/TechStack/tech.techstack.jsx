@@ -1,5 +1,5 @@
-import { techStack } from "../../constants/main.constants";
 import Marquee from "react-fast-marquee";
+import { techStack } from "../../constants/main.constants";
 import { GlobalTooltip } from "../Utilities/tooltip.utilities";
 
 export const MyTechStack = () => {

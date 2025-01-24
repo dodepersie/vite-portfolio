@@ -1,10 +1,16 @@
-import { useState, useEffect } from "react";
-import { FaSun, FaCode, FaBriefcase, FaUserNinja } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 import { BsMoonStarsFill } from "react-icons/bs";
-import { FaRegMessage, FaChevronUp } from "react-icons/fa6";
-import { useDarkMode } from "../Utilities/usedark.utilities";
-import { NavTooltip } from "../Utilities/tooltip.utilities";
+import {
+  FaBriefcase,
+  FaChevronUp,
+  FaCode,
+  FaRegMessage,
+  FaSun,
+  FaUserNinja,
+} from "react-icons/fa6";
 import { Link } from "react-scroll";
+import { NavTooltip } from "../Utilities/tooltip.utilities";
+import { useDarkMode } from "../Utilities/usedark.utilities";
 
 const menuLink = [
   { icon: FaUserNinja, link: "about-me", name: "About Me" },
@@ -60,15 +66,13 @@ export const Navbar = () => {
         </label>
       </div> */}
 
-      <nav
-        className={`flex justify-center items-center p-2 transition-all duration-300 fixed rounded-full shadow-2xl z-[1001] cursor-pointer bg-white/80 hover:bg-white backdrop-blur-sm dark:bg-slate-600 top-auto left-1/2 bottom-4 -translate-x-1/2 translate-y-0 hover:scale-105`}
-      >
+      <nav className="flex justify-center items-center p-2 transition-all duration-300 fixed rounded-full shadow-2xl z-[1001] cursor-pointer bg-white/80 hover:bg-white backdrop-blur-sm dark:bg-slate-600/50 dark:hover:bg-slate-600 top-auto left-1/2 bottom-4 -translate-x-1/2 translate-y-0">
         {/* Menu Items */}
-        <ul className="transition-all menu menu-horizontal items-center md:justify-center gap-2">
-          <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 hover:rounded-box">
+        <ul className="transition-all menu menu-horizontal items-center md:justify-center">
+          <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 rounded-full hover:rounded-full hover:mx-2">
             <label
               htmlFor="toggleDarkMode"
-              className="swap swap-rotate flex justify-center items-center w-[44px] h-10 dark:text-gray-50 hover:rounded-box text-lg rounded-box"
+              className="swap swap-rotate flex justify-center items-center w-[44px] h-10 dark:text-gray-50 rounded-full hover:rounded-full text-lg"
             >
               <input
                 id="toggleDarkMode"
@@ -84,18 +88,18 @@ export const Navbar = () => {
               )}
             </label>
           </li>
-          <div className="transition-all duration-300 w-[2px] h-4 bg-gray-300 dark:bg-slate-500"></div>
+          <div className="transition-all duration-300 w-[1px] h-4 bg-gray-300 dark:bg-slate-500 me-2"></div>
           {menuLink.map((item, index) => (
             <NavTooltip tooltipTitle={item.name} key={index}>
-              <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 hover:rounded-box">
+              <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 hover:rounded-full hover:mx-2">
                 <Link
                   to={item.link}
                   isDynamic={true}
                   spy={true}
                   smooth={true}
                   duration={100}
-                  activeClass="active dark:bg-slate-500 text-gray-50 rounded-box"
-                  className="dark:text-gray-50 rounded-box hover:rounded-box"
+                  activeClass="active dark:bg-slate-500 text-gray-50 rounded-full"
+                  className="dark:text-gray-50 rounded-full hover:rounded-full"
                 >
                   <item.icon />
                 </Link>
@@ -105,11 +109,11 @@ export const Navbar = () => {
 
           {isVisible && (
             <>
-              <div className="transition-all duration-300 w-[2px] h-4 bg-gray-300 dark:bg-slate-500"></div>
-              <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 rounded-box hover:rounded-box">
+              <div className="transition-all duration-300 w-[1px] h-4 bg-gray-300 dark:bg-slate-500 mx-2"></div>
+              <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 rounded-full hover:rounded-full hover:mx-2">
                 <button
                   onClick={scrollToTop}
-                  className="dark:text-gray-50 rounded-box hover:rounded-box"
+                  className="transition-all duration-300 dark:text-gray-50 rounded-full hover:rounded-full"
                 >
                   <FaChevronUp />
                 </button>

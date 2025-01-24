@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { education, workingExp } from "../../constants/main.constants";
+import { education } from "../../constants/main.constants";
 import { GlobalTooltip } from "../Utilities/tooltip.utilities";
 
 export const Experience = () => {
