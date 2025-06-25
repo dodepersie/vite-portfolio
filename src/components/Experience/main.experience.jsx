@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { education } from "../../constants/main.constants";
+import { education, workingExp } from "../../constants/main.constants";
 import { GlobalTooltip } from "../Utilities/tooltip.utilities";
 
 export const Experience = () => {
@@ -53,7 +53,10 @@ export const Experience = () => {
                         {education.name}
                       </Link>
                       <p className="font-semibold">{education.desc} </p>
-                      <p className="text-[15px]">{education.year}</p>
+                      <p className="text-[15px]">
+                        {education.year} - GPA:{" "}
+                        <span className="font-bold">{education.gpa}</span>
+                      </p>
                     </div>
                   </div>
                 );
@@ -68,37 +71,30 @@ export const Experience = () => {
                 <div className="w-20 h-1 bg-blue-700 dark:bg-slate-400"></div>
               </div>
 
-              <p className="text-xl">
-                I'm open for my first work experience 😊
-              </p>
-
-              {/*
               {workingExp.map((workingExp, index) => {
                 return (
                   <div className="flex items-center text-lg" key={index}>
-                    <div className="w-20 h-20 rounded-lg bg-white overflow-hidden">
-                      <img
-                        src={workingExp.logo}
-                        alt={workingExp.name}
-                        className="object-cover rounded-lg shadow-sm w-full h-full"
-                      />
+                    <div className="w-20 h-20 rounded-lg bg-transparent overflow-hidden">
+                      <GlobalTooltip tooltipTitle={workingExp.name}>
+                        <img
+                          src={workingExp.logo}
+                          alt={workingExp.name}
+                          className="object-cover rounded-lg shadow-sm w-full h-full"
+                        />
+                      </GlobalTooltip>
                     </div>
 
                     <div className="flex flex-col items-start justify-start ms-4 w-3/4">
-                      <Link
-                        to={workingExp.link}
-                        target="_blank"
-                        className="text-blue-600 dark:text-blue-300 font-semibold hover:underline"
-                      >
+                      <div className="text-blue-600 dark:text-blue-300 font-semibold">
                         {workingExp.name}
-                      </Link>
-                      <p className="font-semibold">{workingExp.desc} </p>
+                      </div>
+                      <p className="font-semibold">{workingExp.pos}</p>
+                      <p className="font-normal">{workingExp.desc}</p>
                       <p className="text-[15px]">{workingExp.year}</p>
                     </div>
                   </div>
                 );
               })}
-              */}
             </div>
           </div>
         </div>

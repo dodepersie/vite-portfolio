@@ -1,8 +1,8 @@
 import p1 from "./../assets/projects/1.png"; // MoofliXXI
-import p2 from "./../assets/projects/2.png"; // MLBB WR Counter
 import p3 from "./../assets/projects/3.png"; // Laravel BLog
 import p4 from "./../assets/projects/4.png"; // Pilpres 2024
 import p5 from "./../assets/projects/5.png"; // TicTic
+import p6 from "./../assets/projects/6.png"; // T4keAIO
 
 import helpLogo from "./../assets/edu/help.png";
 import stikomLogo from "./../assets/edu/stikom.png";
@@ -13,31 +13,26 @@ export const education = [
     name: "HELP University",
     desc: "Bachelor of Information Technology Honours Degree",
     year: "September 2019 - April 2025",
+    gpa: "3.44",
     link: "https://university.help.edu.my/",
   },
   {
     logo: stikomLogo,
     name: "Institut Teknologi dan Bisnis STIKOM Bali",
     desc: "Sarjana Komputer - Information System",
-    year: "September 2019 - June 2025",
+    year: "September 2019 - April 2025",
+    gpa: "3.44",
     link: "https://stikom-bali.ac.id/",
   },
 ];
 
 export const workingExp = [
   {
-    logo: helpLogo,
-    name: "HELP University",
-    desc: "Bachelor of Information Technology Honours Degree",
-    year: "September 2019 - present",
-    link: "https://university.help.edu.my/",
-  },
-  {
-    logo: stikomLogo,
-    name: "Institut Teknologi dan Bisnis STIKOM Bali",
-    desc: "Sarjana Komputer - Information System",
-    year: "September 2019 - present",
-    link: "https://stikom-bali.ac.id/",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX9R6zMtnA3FAHLHEIFFFRZuGhOA2UBNSwCg&s",
+    name: "PT. Serasi Logistics Indonesia",
+    pos: "Web Developer Intership",
+    desc: "Responsible for developing leave permit system using Laravel and mySQL.",
+    year: "June 2023 - September 2023",
   },
 ];
 
@@ -110,20 +105,22 @@ export const techStack = [
 
 export const projects = [
   {
+    title: "T4ke AIO",
+    description:
+      "This is a small tools website to help you do some things. Curious? Just visit the website~",
+    image: p6,
+    tags: ["NextJS", "Tailwind", "Shadcn"],
+    visit: "https://x1.mahadisaputra.my.id/",
+    github: "https://github.com/dodepersie/t4ke-aio",
+  },
+  {
     title: "TicTic",
     description:
       "For Final Year project. This is a website to manage ticketing for events.",
     image: p5,
     tags: ["Laravel", "Tailwind"],
-    visit: "/",
-  },
-  {
-    title: "MLBB WR Counter",
-    description:
-      "To estimate how many matches you need to get Hero Win Rate you want.",
-    image: p2,
-    tags: ["Bootstrap", "JS", "HTML", "CSS"],
-    visit: "https://penghitung-wr-mlbb.vercel.app/",
+    visit: "",
+    github: "https://github.com/dodepersie/tictic-fp",
   },
   {
     title: "MoofliXXI",
@@ -132,6 +129,7 @@ export const projects = [
     image: p1,
     tags: ["Next UI", "React"],
     visit: "https://mooflixxi.mahadisaputra.my.id/",
+    github: "https://github.com/dodepersie/movie-api-by-tmdb",
   },
   {
     title: "Laravel Blog",
@@ -139,14 +137,16 @@ export const projects = [
       "My personal blog where I'll share my experiences and also a ✨ little ✨ thing that I know.",
     image: p3,
     tags: ["Laravel", "Tailwind"],
-    visit: "https://mahadisaputra.my.id/",
+    visit: "",
+    github: "https://github.com/dodepersie/laravel-blog",
   },
   {
     title: "Real Count Pilpres Nasional 2024",
     description:
-      "Just a fun project to fetch Indonesia president election quick count data from kpu.go.id website",
+      "Just a fun project to fetch Indonesia president election quick count data from kpu.go.id website.",
     image: p4,
     tags: ["NextJS", "Tailwind"],
-    visit: "https://pilpres2024.mahadisaputra.my.id/",
+    visit: "",
+    github: "https://github.com/dodepersie/real-count-pilpres-2024",
   },
 ];

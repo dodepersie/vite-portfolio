@@ -113,7 +113,7 @@ export const Navbar = () => {
               <li className="transition-all duration-300 text-sm dark:hover:bg-slate-700 rounded-full hover:rounded-full hover:mx-2">
                 <button
                   onClick={scrollToTop}
-                  className="transition-all duration-300 dark:text-gray-50 rounded-full hover:rounded-full"
+                  className="transition-all duration-300 dark:bg-transaprent dark:text-gray-50 rounded-full hover:rounded-full"
                 >
                   <FaChevronUp />
                 </button>

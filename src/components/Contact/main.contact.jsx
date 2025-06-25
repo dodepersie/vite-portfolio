@@ -1,112 +1,77 @@
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useRef, useState } from "react";
 import { FaPaperPlane, FaRegMessage } from "react-icons/fa6";
 import { ContactAnimate } from "./../../assets/lottie/contactAnimation/contactAnimation";
+import { errorSwal, successSwal } from "../Utilities/swal.utilities";
 
 const serviceKey = import.meta.env.VITE_SERVICE_KEY;
 const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
 const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
-
-function AlertMessage(props) {
-  const { message, isSuccess } = props;
-  const alertClass = isSuccess ? "bg-blue-500 dark:bg-slate-700" : "bg-red-500";
-
-  return (
-    <div className={`alert ${alertClass} text-base-100 mb-5`}>
-      <div>
-        {isSuccess ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="stroke-current flex-shrink-0 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="stroke-current flex-shrink-0 h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        )}
-        <span>{message}</span>
-      </div>
-    </div>
-  );
-}
+const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export const Contact = () => {
-  const [showAlert, setShowAlert] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false);
-  const form = useRef();
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const recaptchaRef = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Basic validation
-    const userName = form.current.user_name.value.trim();
-    const userEmail = form.current.user_email.value.trim();
-    const message = form.current.message.value.trim();
+    const token = recaptchaRef.current.getValue();
+    if (!token) {
+      errorSwal("Please verify you are not a robot.");
+      return;
+    }
 
-    if (
-      !userName ||
-      !userEmail ||
-      !message ||
-      (userName == "") | (userEmail == "") ||
-      message == ""
-    ) {
-      setAlertMessage("Please fill in all fields.");
-      setIsSuccess(false);
-      setShowAlert(true);
+    // Basic validation
+    const nameTrimmed = userName.trim();
+    const emailTrimmed = userEmail.trim();
+    const messageTrimmed = message.trim();
+
+    if (!nameTrimmed || !emailTrimmed || !messageTrimmed) {
+      errorSwal("Please fill the form!");
       return;
     }
 
     // Simple email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(userEmail)) {
-      setAlertMessage("Please enter a valid email address.");
-      setIsSuccess(false);
-      setShowAlert(true);
-      return; // Stop the function if validation fails
+      errorSwal("Please enter a valid email address.");
+      return;
     }
 
     setIsSending(true);
 
+    const templateParams = {
+      user_name: nameTrimmed,
+      user_email: emailTrimmed,
+      message: messageTrimmed,
+    };
+
     emailjs
-      .sendForm(serviceKey, templateKey, form.current, apiKey)
+      .send(serviceKey, templateKey, templateParams, apiKey)
       .then(
         (result) => {
-          setShowAlert(true);
-          e.target.reset();
-          setAlertMessage("Message sent successfully!");
-          setIsSuccess(true);
+          successSwal("Message sent successfully!");
+          setUserName("");
+          setUserEmail("");
+          setMessage("");
+          recaptchaRef.current.reset();
         },
         (error) => {
-          setShowAlert(true);
-          setAlertMessage("Error sending message. Try again later!");
-          setIsSuccess(false);
+          errorSwal("Error sending message. Try again later!");
+          recaptchaRef.current.reset();
         }
       )
       .finally(() => {
         setIsSending(false);
       });
   };
+
+  const isButtonDisabled = isSending || !userName || !userEmail || !message;
 
   return (
     <section id="contact">
@@ -124,17 +89,16 @@ export const Contact = () => {
               </div>
             </div>
 
-            {showAlert && (
-              <AlertMessage message={alertMessage} isSuccess={isSuccess} />
-            )}
-
-            <form ref={form} onSubmit={sendEmail} action="/">
+            <form onSubmit={sendEmail}>
               <div className="form-control w-full">
                 <input
                   type="text"
                   name="user_name"
                   className="input caret-pink-500 bg-gray-100 text-black"
+                  value={userName}
+                  onChange={(e) => setUserName(e.target.value)}
                   placeholder="Your name.."
+                  autoComplete="off"
                   required
                 />
               </div>
@@ -144,7 +108,10 @@ export const Contact = () => {
                   type="email"
                   name="user_email"
                   className="input caret-pink-500 bg-gray-100 text-black mt-5"
+                  value={userEmail}
+                  onChange={(e) => setUserEmail(e.target.value)}
                   placeholder="Your email.."
+                  autoComplete="off"
                   required
                 />
               </div>
@@ -153,17 +120,25 @@ export const Contact = () => {
                 <textarea
                   className="textarea caret-pink-500 bg-gray-100 resize-none text-black mt-5"
                   name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your message.."
                   required
                 ></textarea>
               </div>
 
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={recaptchaKey}
+                className="mt-5"
+              />
+
               <button
                 className="btn btn-block border-0 mt-5 bg-blue-500 hover:bg-blue-600 active:bg-blue-900 dark:bg-slate-800 dark:hover:bg-slate-800/50 text-gray-50 disabled:text-white disabled:cursor-not-allowed disabled:opacity-50"
                 type="submit"
-                disabled={isSending}
+                disabled={isButtonDisabled}
               >
-                <FaPaperPlane class="mr-2" />
+                <FaPaperPlane className="mr-2" />
                 {isSending ? "Sending..." : "Send"}
               </button>
             </form>
