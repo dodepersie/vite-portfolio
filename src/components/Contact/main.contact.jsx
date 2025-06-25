@@ -5,10 +5,10 @@ import { FaPaperPlane, FaRegMessage } from "react-icons/fa6";
 import { ContactAnimate } from "./../../assets/lottie/contactAnimation/contactAnimation";
 import { errorSwal, successSwal } from "../Utilities/swal.utilities";
 
-const serviceKey = import.meta.env.VITE_SERVICE_KEY;
-const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
-const apiKey = import.meta.env.VITE_EMAILJS_API_KEY;
-const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+const serviceKey = import.meta.env.SERVICE_KEY;
+const templateKey = import.meta.env.TEMPLATE_KEY;
+const apiKey = import.meta.env.EMAILJS_API_KEY;
+const recaptchaKey = import.meta.env.RECAPTCHA_SITE_KEY;
 
 export const Contact = () => {
   const [isSending, setIsSending] = useState(false);
