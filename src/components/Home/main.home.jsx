@@ -2,6 +2,7 @@ import { FaCircleChevronDown, FaRegFileLines } from "react-icons/fa6";
 import { Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import photo1 from "./../../assets/1.png";
+// import photo2 from "./../../assets/mahadisaputrapic.jpg";
 
 export const Home = () => {
   return (
@@ -62,6 +63,7 @@ export const Home = () => {
                 href="https://linkedin.com/in/mahadisaputra"
                 className="btn bg-white hover:bg-white text-black border-0"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaRegFileLines className="me-2" />
                 My CV
