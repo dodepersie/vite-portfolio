@@ -13,7 +13,7 @@ export const education = [
     name: "HELP University",
     desc: "Bachelor of Information Technology Honours Degree",
     year: "September 2019 - April 2025",
-    gpa: "3.44",
+    gpa: "2.83 - Second Class Honours Lower",
     link: "https://university.help.edu.my/",
   },
   {
